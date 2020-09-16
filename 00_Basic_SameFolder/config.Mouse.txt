@@ -1,4 +1,4 @@
-Prefix pipelines/Mouse
+Prefix 00_Basic_SameFolder/
 Plugin CSVNormalize inputfile abund.csv outputfile abund.norm.csv
 Plugin Spearman inputfile abund.norm.csv outputfile spearman.csv
 Plugin CSVPad inputfile spearman.csv outputfile network.csv

@@ -1,0 +1,2 @@
+Plugin GPUATria inputfile Networks/network.csv outputfile ATria.gpu.noa
+Plugin ATria inputfile Networks/network.csv outputfile ATria.noa

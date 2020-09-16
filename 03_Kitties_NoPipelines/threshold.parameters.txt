@@ -1,0 +1,4 @@
+inputfile	pipelines/rawAnalysis/abundRaw.csv
+threshold	100
+normalize	true
+startcol	3

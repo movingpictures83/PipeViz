@@ -1,3 +1,3 @@
-inputfile	pipelines/rawAnalysis/abund.thresholded.csv
+inputfile	01_Parameters_DifferentFolder/abund.thresholded.csv
 column		1
 value		S

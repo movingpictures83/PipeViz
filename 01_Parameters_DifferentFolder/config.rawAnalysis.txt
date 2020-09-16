@@ -1,0 +1,10 @@
+Prefix pipelines/rawAnalysis
+Plugin CSVNormalize inputfile abundRaw.csv outputfile abundRaw.normalized.csv
+Plugin Threshold inputfile threshold.parameters.txt outputfile abund.thresholded.csv 
+Plugin CSVExtract inputfile A/extract.A.txt outputfile A/normFileA.csv
+Plugin CSVExtract inputfile F/extract.F.txt outputfile F/normFileF.csv
+Plugin CSVExtract inputfile N/extract.N.txt outputfile N/normFileN.csv
+Plugin CSVExtract inputfile NC/extract.NC.txt outputfile NC/normFileNC.csv
+Plugin CSVExtract inputfile C/extract.C.txt outputfile C/normFileC.csv
+
+

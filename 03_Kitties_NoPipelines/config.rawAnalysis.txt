@@ -1,4 +1,4 @@
-Prefix pipelines/rawAnalysis
+Prefix 03_Kitties_NoPipelines
 Plugin CSVNormalize inputfile abundRaw.csv outputfile abundRaw.normalized.csv
 Plugin Threshold inputfile threshold.parameters.txt outputfile abund.thresholded.csv 
 Kitty A

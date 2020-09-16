@@ -1,3 +1,3 @@
-inputfile	pipelines/rawAnalysis/abund.thresholded.csv
+inputfile	03_Kitties_NoPipelines/abund.thresholded.csv
 column		2
 value		N

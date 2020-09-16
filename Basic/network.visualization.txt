@@ -1,3 +1,0 @@
-networkfile pipelines/Mouse/network.gml
-sessionfile pipelines/Mouse/default.cys
-

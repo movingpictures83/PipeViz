@@ -1,0 +1,8 @@
+Prefix pipelines/Mouse
+Plugin CSVNormalize inputfile abund.csv outputfile abund.norm.csv
+Plugin Spearman inputfile abund.norm.csv outputfile spearman.csv
+Plugin CSVPad inputfile spearman.csv outputfile Networks/network.csv
+Plugin GPUATria inputfile Networks/network.csv outputfile ATria.noa
+Plugin ATria inputfile Networks/network.csv outputfile ATria.noa
+Plugin CSV2GML inputfile Networks/network.csv outputfile Networks/network.gml
+

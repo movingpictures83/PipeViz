@@ -1,4 +1,4 @@
-Prefix pipelines/rawAnalysis
+Prefix 01_Parameters_DifferentFolder/
 Plugin CSVNormalize inputfile abundRaw.csv outputfile abundRaw.normalized.csv
 Plugin Threshold inputfile threshold.parameters.txt outputfile abund.thresholded.csv 
 Plugin CSVExtract inputfile A/extract.A.txt outputfile A/normFileA.csv

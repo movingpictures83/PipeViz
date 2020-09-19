@@ -1,0 +1,25 @@
+digraph Basic_DifferentFolder {
+	node [style=bold, shape=box];
+	a[label="00_Basic_DifferentFolder/abund.csv"];
+	b[label="CSVNormalize", color=deepskyblue, style=filled, fontcolor=white];
+	c[label="00_Basic_DifferentFolder/abund.norm.csv"];
+	d[label="Spearman", color=deepskyblue, style=filled, fontcolor=white];
+	e[label="00_Basic_DifferentFolder/spearman.csv"];
+	f[label="CSVPad", color=deepskyblue, style=filled, fontcolor=white];
+	g[label="00_Basic_DifferentFolder/Networks/network.csv"];
+	h[label="GPUAtria", color=deepskyblue, style=filled, fontcolor=white];
+	i[label="CSV2GML", color=deepskyblue, style=filled, fontcolor=white];
+	j[label="00_Basic_DifferentFolder/ATria.noa"];
+	k[label="00_Basic_DifferentFolder/Networks/network.gml"];
+
+	a -> b;
+	b -> c;
+	c -> d;
+	d -> e;
+	e -> f;
+	f -> g;
+	g -> h;
+	g -> i;
+	h -> j;
+	i -> k;
+}

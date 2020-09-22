@@ -1,4 +1,4 @@
-digraph Parameters_SameFolder {
+digraph Basic_DifferentFolder {
     
     
 	node [style=bold, shape=box];
@@ -11,7 +11,6 @@ digraph Parameters_SameFolder {
 	f[label="01_Parameterss_SameFolder/abund.thresholded.csv "];
 	
 	
-
 	
 	g[label="01_Parameters_SameFolder/extract.A.txt"];
 	h[label="CSVExtract", color=deepskyblue, style=filled, fontcolor=white];
@@ -19,23 +18,23 @@ digraph Parameters_SameFolder {
 	
 	j[label="01_Parameters_SameFolder/extract.F.txt"];
 	k[label="CSVExtract", color=deepskyblue, style=filled, fontcolor=white];
-    l[label="01_Parameters_SameFolder/normFileF.csv"];
+	l[label="01_Parameters_SameFolder/normFileF.csv"];
 	
 	m[label="01_Parameters_SameFolder/extract.N.txt"];
 	n[label="CSVExtract", color=deepskyblue, style=filled, fontcolor=white];
-    o[label="01_Parameters_SameFolder/normFileN.csv"];
+	o[label="01_Parameters_SameFolder/normFileN.csv"];
 	
 	p[label="01_Parameters_SameFolder/extract.NC.txt"];
 	q[label="CSVExtract", color=deepskyblue, style=filled, fontcolor=white];
-    r[label="01_Parameters_SameFolder/normFileNC.csv"];
+	r[label="01_Parameters_SameFolder/normFileNC.csv"];
 	
 	s[label="01_Parameters_SameFolder/extract.C.txt"];
 	t[label="CSVExtract", color=deepskyblue, style=filled, fontcolor=white];
-    u[label="01_Parameters_SameFolder/normFileC.csv"];
+	u[label="01_Parameters_SameFolder/normFileC.csv"];
 
 	a -> b;
 	b -> c;
-
+	a -> d;
 	
 	d -> e;
 	e -> f;
@@ -43,7 +42,7 @@ digraph Parameters_SameFolder {
 	g -> h;
 	h -> i;
 	
-	j -> k;
+    j -> k;
 	k -> l;
 	
 	m -> n;
@@ -54,7 +53,13 @@ digraph Parameters_SameFolder {
 	
 	s -> t;
 	t -> u;
-	
-	
+
+f -> g;
+f -> j;
+f -> m;
+f -> p;
+f -> s;
+
+
 
 }

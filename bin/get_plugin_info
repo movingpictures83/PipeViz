@@ -1,6 +1,6 @@
 if [ $# -lt 1 ] || [ $# -gt 2 ]
 then
-  echo "Invalid number of arguments. Expected atleast 1 got ${#}."
+  echo "Invalid number of arguments. Expected 1-2 got ${#}."
   echo "Usage: 'get_plugin_info [file] [property]'"
   exit 1
 fi

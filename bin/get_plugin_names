@@ -1,1 +1,3 @@
-grep -E '^Plugin{1} [^ ]* inputfile{1} [^ ]* outputfile{1} [^ ]*' $1
+# From each line in the input, get the second field using space as the delimiter.
+# Then get only unique lines.
+get_valid_plugins $* | cut -d ' ' -f 2 | uniq -u

@@ -1,3 +1,0 @@
-# From each line in the input, get the second field using space as the delimiter.
-# Then sort lines and filter duplicates.
-get_valid_plugins $* | cut -d ' ' -f 2 | sort -u

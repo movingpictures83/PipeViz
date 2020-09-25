@@ -17,4 +17,5 @@ then
 fi
 
 # From each line in the input, get the $property field using space as the delimiter.
+# Then sort our lines and filter duplicates.
 get_valid_plugins $1 | cut -d ' ' -f $property | sort -u

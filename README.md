@@ -2,5 +2,7 @@
 Visualize a pipeline using a network
 
 # Environment Setup
-Run the following command:
-``` . bin/init_bin```
+Run the following commands:
+```cd bin```
+then
+```. ./init_bin```

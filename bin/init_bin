@@ -1,0 +1,2 @@
+export PATH=$PATH:`pwd`
+echo "Successfully added `pwd` to PATH."

@@ -9,7 +9,8 @@ then
 ```. ./init_bin```
 
 If using ocelot ensure that your current shell is bash with:
-echo $SHELL
+
+```echo $SHELL```
 
 If not change it with:
 ```bash```

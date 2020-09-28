@@ -1,0 +1,1 @@
+plugin_info $1 inputs | grep *parameters*

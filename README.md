@@ -2,26 +2,21 @@
 Visualize a pipeline using a network
 
 # Environment Setup
-Run the following commands:
+To get started run the following command:
 
-```cd bin```
-then
-```. ./init_bin```
+```cd bin ; . ./init_bin```
 
 If using ocelot ensure that your current shell is bash with:
 
 ```echo $SHELL```
 
 If not change it with:
+
 ```bash```
 
 then
 
-```cd bin```
-
-and
-
-```source init_bin```
+```cd bin ; source init_bin```
 
 # Testing
 To run tests for the scripts run the following command:

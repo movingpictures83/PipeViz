@@ -2,10 +2,6 @@ total=0
 passed=0
 failed=0
 
-red='\033[0;31m'
-green='\033[0;32m'
-reset='\033[0m'
-
 for test in `ls -d */`
 do
   echo "Testing: $test"
@@ -15,11 +11,11 @@ do
   if [[ $result == 'fail' ]]
   then
     failed=$(( $failed + 1 ))
-    echo "$red \tFail $reset"
+    echo "\tFail"
   else
     passed=$(( $passed + 1 ))
-    echo "$green \tPass $reset"
+    echo " \tPass"
   fi
 done
 
-echo "Tests: $green $passed passed, $red $failed failed, $reset $total total\a"
+echo "Tests: $passed passed, $failed failed, $total total\a"

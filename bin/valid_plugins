@@ -1,1 +1,2 @@
+# This script will only return valid plugins. 
 grep -E '^Plugin{1} [^ ]* inputfile{1} [^ ]* outputfile{1} [^ ]*' $*

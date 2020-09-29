@@ -23,3 +23,9 @@ and
 
 ```source init_bin```
 
+# Testing
+To run tests for the scripts run the following command:
+
+```cd tests ; ./run_tests```
+
+The PipeViz bin folder must be exported to the ```PATH``` environment variable.

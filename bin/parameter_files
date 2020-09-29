@@ -1,3 +1,10 @@
 # This script will fetch all input files from a configuration file. 
 # Then it will find all files whose name includes 'parameters'.
+
+if [ $# != 1 ]
+then
+	echo "Invalid number of arguments. Expected 1 got ${#}."
+	echo "Usage: 'parameter_files [file]'"
+	exit 1
+fi
 plugin_info $1 inputs | grep *parameters*

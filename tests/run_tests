@@ -11,11 +11,11 @@ do
   if [[ $result == 'fail' ]]
   then
     failed=$(( $failed + 1 ))
-    echo "\tFail"
+    echo "  Fail"
   else
     passed=$(( $passed + 1 ))
-    echo " \tPass"
+    echo "  Pass"
   fi
 done
 
-echo "Tests: $passed passed, $failed failed, $total total\a"
+echo "Tests: $passed passed, $failed failed, $total total"

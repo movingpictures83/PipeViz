@@ -1,0 +1,3 @@
+valid_plugins config.test.txt > actual.txt
+cmp --silent actual.txt expected.txt || echo 'fail'
+rm actual.txt

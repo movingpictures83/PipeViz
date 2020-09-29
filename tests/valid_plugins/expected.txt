@@ -1,0 +1,5 @@
+Plugin CSVNormalize inputfile abund.csv outputfile abund.norm.csv
+Plugin Spearman inputfile abund.norm.csv outputfile spearman.csv
+Plugin CSV2GML inputfile Networks/network.csv outputfile Networks/network.gml
+Plugin GPUATria inputfile Networks/network.csv outputfile ATria.noa
+Plugin CSVPad inputfile spearman.csv outputfile Networks/network.csv

@@ -1,0 +1,21 @@
+total=0
+passed=0
+failed=0
+
+for test in `ls -d */`
+do
+  echo "Testing: $test"
+  total=$(( $total + 1 ))
+  script=`(cd $test ; ls *test)`
+  result=`(cd $test ; bash ./$script)`
+  if [[ $result == 'fail' ]]
+  then
+    failed=$(( $failed + 1 ))
+    echo "  Fail"
+  else
+    passed=$(( $passed + 1 ))
+    echo "  Pass"
+  fi
+done
+
+echo "Tests: $passed passed, $failed failed, $total total"

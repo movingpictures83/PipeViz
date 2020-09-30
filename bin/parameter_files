@@ -1,7 +1,7 @@
 # This script will fetch all input files from a configuration file. 
-# Then it will find all files that start with 'inputfile filename'.
+# Then it will find all files that contain a line 'inputfile filename'.
 
-if [ $# != 1 ]
+if [[ $# != 1 ]]
 then
 	echo "Invalid number of arguments. Expected 1 got ${#}."
 	echo "Usage: 'parameter_files [file]'"
@@ -10,5 +10,5 @@ fi
 
 for file in `plugin_info $1 inputs`
 do
-	egrep -l '^inputfile{1}	.*' $file
+	egrep -ls '^inputfile{1}	.*' $file
 done

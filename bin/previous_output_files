@@ -1,0 +1,16 @@
+param_files=`parameter_files $1`
+
+if [[ -z "$param_files" ]]
+then
+  echo "No parameter files in '$1'."
+  exit 1
+fi
+
+plugin_info $1 outputs > input_files
+
+for file in `plugin_info $1 inputs`
+do
+  grep $file input_files
+done
+
+rm input_files

@@ -1,5 +1,5 @@
 # This script will fetch all input files from a configuration file. 
-# Then it will find all files whose name includes 'parameters'.
+# Then it will find all files that start with 'inputfile filename'.
 
 if [ $# != 1 ]
 then
@@ -7,4 +7,8 @@ then
 	echo "Usage: 'parameter_files [file]'"
 	exit 1
 fi
-plugin_info $1 inputs | grep *parameters*
+
+for file in `plugin_info $1 inputs`
+do
+	egrep -l '^inputfile{1}	.*' $file
+done

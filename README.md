@@ -19,8 +19,11 @@ then
 ```cd bin ; source init_bin```
 
 # Testing
-To run tests for the scripts run the following command:
+To run tests run the following command within the root of the PipeViz directory:
 
-```cd tests ; ./run_tests```
+```run_tests```
 
 The PipeViz bin folder must be exported to the ```PATH``` environment variable.
+
+# Writing Tests
+To write a test, simply create a file with the name ```expected.gv``` within one of the testing folders. This file should contain the expected output of executing ```gen_dot```.

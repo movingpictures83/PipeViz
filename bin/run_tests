@@ -6,7 +6,7 @@ for test in `ls -d */ | egrep '^[0-9]{2}_.*'`
 do
   echo "Testing: $test"
   total=$(( $total + 1 ))
-  result=`(cd $test ; ls)`
+  result=`(cd $test ; gen_dot config* ; cmp --silent expected.gv config*.gv) || echo 'fail'`
   if [[ $result == 'fail' ]]
   then
     failed=$(( $failed + 1 ))
@@ -15,6 +15,7 @@ do
     passed=$(( $passed + 1 ))
     echo "  Pass"
   fi
+  `cd $test ; rm config*.gv`
 done
 
 echo "Tests: $passed passed, $failed failed, $total total"

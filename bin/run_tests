@@ -2,12 +2,11 @@ total=0
 passed=0
 failed=0
 
-for test in `ls -d */`
+for test in `ls -d */ | egrep '^[0-9]{2}_.*'`
 do
   echo "Testing: $test"
   total=$(( $total + 1 ))
-  script=`(cd $test ; ls *test)`
-  result=`(cd $test ; bash ./$script)`
+  result=`(cd $test ; ls)`
   if [[ $result == 'fail' ]]
   then
     failed=$(( $failed + 1 ))

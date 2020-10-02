@@ -6,8 +6,9 @@ for test in `ls -d */ | egrep '^[0-9]{2}_.*'`
 do
   echo "Testing: $test"
   total=$(( $total + 1 ))
-  result=`(cd $test ; gen_dot config* ; cmp --silent expected.gv config*.gv) || echo 'fail'`
-  if [[ $result == 'fail' ]]
+  # Result will tell us how many lines are different between the expected gv file and the generated one.
+  result=`(cd $test ; gen_dot config* ; (diff -y --suppress-common-lines expected.gv config*.gv | wc -l))`
+  if [[ $result -ne 0 ]]
   then
     failed=$(( $failed + 1 ))
     echo "  Fail"
@@ -15,7 +16,8 @@ do
     passed=$(( $passed + 1 ))
     echo "  Pass"
   fi
-  `cd $test ; rm config*.gv`
 done
+
+rm -r ./*/config*.gv 
 
 echo "Tests: $passed passed, $failed failed, $total total"

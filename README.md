@@ -19,7 +19,7 @@ then
 ```cd bin ; source init_bin```
 
 # Testing
-To run tests for the scripts run the following command within the root of the PipeViz directory:
+To run tests run the following command within the root of the PipeViz directory:
 
 ```run_tests```
 

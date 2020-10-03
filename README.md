@@ -36,6 +36,7 @@ Once you are ready to commit your code, use the command:
 Then add and commit your changes with:
 
 ```git add .```
+
 ```git commit -m 'Your commit message'```
 
 Finally push your changes to your branch with:
@@ -43,3 +44,5 @@ Finally push your changes to your branch with:
 ```git push -u origin yourname/yourfeature```
 
 If you make any additional changes to your branch, you only need to add, commit, and push your changes. Do not create another branch.
+
+Then create a pull request and request a review from any of the contributors.

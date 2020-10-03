@@ -19,4 +19,7 @@ done
 
 echo "}" >> $dotFile
 
-dot -Tpng -O $dotFile
+if [[ $2 == png ]]
+then
+  dot -Tpng -O $dotFile
+fi

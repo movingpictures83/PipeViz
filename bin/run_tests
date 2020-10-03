@@ -2,6 +2,8 @@ total=0
 passed=0
 failed=0
 
+clean_output
+
 for test in `ls -d */ | egrep '^[0-9]{2}_.*'`
 do
   echo "Testing: $test"

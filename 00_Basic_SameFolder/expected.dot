@@ -1,8 +1,8 @@
 digraph G {
 	node [style=bold, shape=box];
-	"abund.csv"->"CSVNormalize"->"abund.norm.csv"
-	"abund.norm.csv"->"Spearman"->"spearman.csv"
-	"spearman.csv"->"CSVPad"->"network.csv"
-	"network.csv"->"GPUATria"->"ATria.noa"
-	"network.csv"->"CSV2GML"->"network.gml"
+	"abund.csv"->"CSVNormalize"->"abund.norm.csv";
+	"abund.norm.csv"->"Spearman"->"spearman.csv";
+	"spearman.csv"->"CSVPad"->"network.csv";
+	"network.csv"->"GPUATria"->"ATria.noa";
+	"network.csv"->"CSV2GML"->"network.gml";
 }

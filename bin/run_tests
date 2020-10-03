@@ -18,6 +18,6 @@ do
   fi
 done
 
-rm -r ./*/config*.dot ./*/*.dot.png
+clean_output
 
 echo "Tests: $passed passed, $failed failed, $total total"

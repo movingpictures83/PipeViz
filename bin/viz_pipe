@@ -9,7 +9,7 @@ valid_plugins $1 | while read line; do
   # $2 is the Plugin name, $4 is the input file name, and $6 is the output file name.
   # The OFS flag lets us set the output delimeter to ->. 
   # At this point of the pipeline we have a->b->c
-  # We then need to use sed to wrap the vertices.
+  # We then need to use sed to wrap the vertices with double quotes.
   # We create a capturing group by using the regex expression: ([^->]+),
   # this will capture any character into a group except - and >
   # We then want to wrap the captured groups with quotes we do this with "\1"

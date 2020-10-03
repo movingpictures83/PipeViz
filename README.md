@@ -26,7 +26,7 @@ To run tests run the following command within the root of the PipeViz directory:
 The PipeViz bin folder must be exported to the ```PATH``` environment variable.
 
 # Writing Tests
-To write a test, simply create a file with the name ```expected.dot``` within one of the testing folders. This file should contain the expected output of executing ```gen_dot```.
+To write a test, simply create a file with the name ```expected.dot``` within one of the testing folders. This file should contain the expected output of executing ```viz_pipe```.
 
 # Contributing
 Once you are ready to commit your code, use the command:

@@ -7,7 +7,7 @@ do
   echo "Testing: $test"
   total=$(( $total + 1 ))
   # Result will tell us how many lines are different between the expected gv file and the generated one.
-  result=`(cd $test ; gen_dot config* ; (diff -y --suppress-common-lines expected.dot config*.dot | wc -l))`
+  result=`(cd $test ; viz_pipe config* ; (diff -y --suppress-common-lines expected.dot config*.dot | wc -l))`
   if [[ $result -ne 0 ]]
   then
     failed=$(( $failed + 1 ))

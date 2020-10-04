@@ -1,0 +1,8 @@
+digraph G {
+	node [style=bold, shape=box];
+	"abund.csv"->"CSVNormalize"->"abund.norm.csv";
+	"abund.norm.csv"->"Spearman"->"spearman.csv";
+	"spearman.csv"->"CSVPad"->"Networks/network.csv";
+	"Networks/network.csv"->"GPUATria"->"ATria.noa";
+	"Networks/network.csv"->"CSV2GML"->"Networks/network.gml";
+}

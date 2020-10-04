@@ -1,0 +1,15 @@
+digraph G {
+	node [style=bold, shape=box];
+	1 [label="CVSExtract"];
+	2 [label="CVSExtract"];
+	3 [label="CVSExtract"];
+	4 [label="CVSExtract"];
+	5 [label="CVSExtract"];
+	"abund.raw.csv"->"CSVNormalize"->"abund.normalized.csv";
+	"abund.raw.csv"->"Threshold"->"abund.tresholded.csv";
+	"abund.tresholded.csv"->"1"->"normFileA.csv";
+	"abund.tresholded.csv"->"2"->"normFileF.csv";
+	"abund.tresholded.csv"->"3"->"normFileN.csv";
+	"abund.tresholded.csv"->"4"->"normFileNC.csv";
+	"abund.tresholded.csv"->"5"->"normFileC.csv";
+}

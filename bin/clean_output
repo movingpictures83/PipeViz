@@ -1,1 +1,1 @@
-rm -rf ./*/config*.dot ./*/*.dot.png
+rm -rf ./*/config*.dot ./*/*.dot.png ; rm -f config*.dot *.dot.png

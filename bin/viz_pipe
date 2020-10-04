@@ -1,0 +1,25 @@
+dotFile=$1.dot
+
+printf "digraph G {\n	node [style=bold, shape=box];\n" > $dotFile
+
+valid_plugins $1 | while read line; do
+  # The next line will edit a valid plugin line into the form of "a"->"b"->"c"
+  # We first start by using awk to get the necessary fields. The default field delimeter is a space.
+  # We then print the necessary fields that describe an edge in the directed graph. 
+  # $2 is the Plugin name, $4 is the input file name, and $6 is the output file name.
+  # The OFS flag lets us set the output delimeter to ->. 
+  # At this point of the pipeline we have a->b->c
+  # We then need to use sed to wrap the vertices with double quotes.
+  # We create a capturing group by using the regex expression: ([^->]+),
+  # this will capture any character into a group except - and >
+  # We then want to wrap the captured groups with quotes we do this with "\1"
+  
+  printf "\t`echo "$line" | awk 'OFS="->" {print $4,$2,$6}' | sed -E 's/([^->]+)/"\1"/g'`;\n" >> $dotFile
+done
+
+printf "}\n" >> $dotFile
+
+if [[ $2 == png ]]
+then
+  dot -Tpng -O $dotFile
+fi

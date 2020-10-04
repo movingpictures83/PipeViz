@@ -1,4 +1,4 @@
-digraph Basic_DifferentFolder {
+digraph Parameters_DifferentFolder {
     
     
 	node [style=bold, shape=box];

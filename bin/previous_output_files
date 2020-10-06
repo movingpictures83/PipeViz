@@ -1,4 +1,5 @@
-param_files=`parameter_files $1`
+param_files=$(parameter_files $1)
+
 
 if [[ -z "$param_files" ]]
 then
@@ -6,11 +7,34 @@ then
   exit 1
 fi
 
-plugin_info $1 outputs > input_files
+OUTPUT=false
+INPUT=false
+PARAM=false
 
-for file in `plugin_info $1 inputs`
-do
-  grep $file input_files
-done
+while read -ra line; do
+	for p in "${line[@]}";
+	do
+		if [[ $p == inputfile ]]
+		then
+			INPUT=true
+		elif [[ $p == outputfile ]]
+		then
+			OUTPUT=true	
+			INPUT=$p
+		elif [[ $INPUT == true ]]
+		then
+			#test to see if input file is param file
+			PARAM=$(grep $p $param_files)
+			if [[ -z "$PARAM" ]]
+			then
+			  exit 1
+			fi	
+			INPUT=false		
+		elif [[ $OUTPUT == true ]]
+		then
+			printf "$p\n"
+			OUTPUT=false
+		fi
+	done;
+done <$1
 
-rm input_files

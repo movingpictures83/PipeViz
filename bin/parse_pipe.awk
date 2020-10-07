@@ -1,4 +1,4 @@
-#! /usr/bin/env awk -f
+#! /usr/bin/awk -f
 
 BEGIN {
   print "digraph G {\n\tnode [style=bold, shape=box];\n";

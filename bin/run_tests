@@ -4,8 +4,6 @@ failed=0
 
 clean_output
 
-re='^[0-9]+'
-
 for test in `ls -d */ | egrep '^[0-9]{2}_.*'`
 do
   echo "Testing: $test"

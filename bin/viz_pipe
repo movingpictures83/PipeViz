@@ -1,8 +1,14 @@
+if [[ ! -e $1 ]]
+then
+	printf "File $1 not found.\n"
+  exit 1
+fi
+
 dot_file=$1.dot
 
 parse_pipe.awk $1 > $dot_file
 
 if [[ $2 == png ]]
 then
-  dot -Tpng -O $dotFile
+  dot -Tpng -O $dot_file
 fi

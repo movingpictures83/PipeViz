@@ -10,10 +10,10 @@ property=2
 
 if [[ $2 == inputs ]]
 then
-  	property=4
+	property=4
 elif [[ $2 == outputs ]]
 then
-  	property=6
+	property=6
 fi
 
 # From each line in the input, get the $property field using space as the delimiter.

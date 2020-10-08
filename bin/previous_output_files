@@ -1,5 +1,12 @@
-param_files=$(parameter_files $1)
+param_files=`parameter_files $1`
 
+config_file=$1
+
+if [[ -z "$config_file" ]]
+then
+  echo "No config file entered."
+  exit 1
+fi
 
 if [[ -z "$param_files" ]]
 then
@@ -7,34 +14,14 @@ then
   exit 1
 fi
 
-OUTPUT=false
-INPUT=false
-PARAM=false
-
-while read -ra line; do
-	for p in "${line[@]}";
-	do
-		if [[ $p == inputfile ]]
-		then
-			INPUT=true
-		elif [[ $p == outputfile ]]
-		then
-			OUTPUT=true	
-			INPUT=$p
-		elif [[ $INPUT == true ]]
-		then
-			#test to see if input file is param file
-			PARAM=$(grep $p $param_files)
-			if [[ -z "$PARAM" ]]
-			then
-			  exit 1
-			fi	
-			INPUT=false		
-		elif [[ $OUTPUT == true ]]
-		then
-			printf "$p\n"
-			OUTPUT=false
-		fi
-	done;
-done <$1
-
+valid_plugins $1 | while read line
+do
+	output_file=`echo $line | cut -d ' ' -f 6`
+	input_file=`echo $line | cut -d ' ' -f 4`
+	has_param_file=`grep $input_file $param_files`
+	if [[ -z "$has_param_file" ]]
+	then
+		exit 1
+	fi
+	printf "$output_file\n"
+done

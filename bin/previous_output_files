@@ -1,16 +1,27 @@
 param_files=`parameter_files $1`
 
+config_file=$1
+
+if [[ -z "$config_file" ]]
+then
+  echo "No config file entered."
+  exit 1
+fi
+
 if [[ -z "$param_files" ]]
 then
   echo "No parameter files in '$1'."
   exit 1
 fi
 
-plugin_info $1 outputs > input_files
-
-for file in `plugin_info $1 inputs`
+valid_plugins $1 | while read line
 do
-  grep $file input_files
+	output_file=`echo $line | cut -d ' ' -f 6`
+	input_file=`echo $line | cut -d ' ' -f 4`
+	has_param_file=`grep $input_file $param_files`
+	if [[ -z "$has_param_file" ]]
+	then
+		exit 1
+	fi
+	printf "$output_file\n"
 done
-
-rm input_files

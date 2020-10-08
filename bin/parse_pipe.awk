@@ -8,18 +8,18 @@ BEGIN {
 }
 
 {
-  if ($1 == "Plugin") {
-    pluginLabel = ($2 == previousPlugin) ? (pluginId) : ($2);
-    printf("\t\"%s%s\"->\"%s\"->\"%s%s\";\n", prefix, $4, pluginLabel, prefix, $6);
-    if ($2 == previousPlugin) {
-      plugins[pluginId++] = $2;
-    } else {
-      plugins[$2] = $2;
-    }
-    previousPlugin = $2;
-  } else if ($1 == "Prefix") {
+  if ($1 == "Prefix") {
     prefix = $2;
+    next;
   }
+  if (length($0) == 0 || $1 == "Kitty" || $1 == "Pipelines") {
+    next;
+  }
+  isPreviousPlugin = $2 == previousPlugin;
+  pluginLabel = isPreviousPlugin ? pluginId : $2;
+  printf("\t\"%s%s\"->\"%s\"->\"%s%s\";\n", prefix, $4, pluginLabel, prefix, $6);
+  plugins[isPreviousPlugin ? pluginId++ : $2] = $2;
+  previousPlugin = $2;
 }
 
 END {

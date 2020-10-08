@@ -1,8 +1,13 @@
 digraph G {
-	node [style=bold, shape=box];
+	node [style=bold]
 	"00_Basic_DifferentFolder/abund.csv"->"CSVNormalize"->"00_Basic_DifferentFolder/abund.norm.csv";
 	"00_Basic_DifferentFolder/abund.norm.csv"->"Spearman"->"00_Basic_DifferentFolder/spearman.csv";
 	"00_Basic_DifferentFolder/spearman.csv"->"CSVPad"->"00_Basic_DifferentFolder/Networks/network.csv";
 	"00_Basic_DifferentFolder/Networks/network.csv"->"GPUATria"->"00_Basic_DifferentFolder/ATria.noa";
 	"00_Basic_DifferentFolder/Networks/network.csv"->"CSV2GML"->"00_Basic_DifferentFolder/Networks/network.gml";
+	"CSVNormalize" [label="CSVNormalize", shape=box, color=dodgerblue1, fontcolor=white, style=filled];
+	"CSV2GML" [label="CSV2GML", shape=box, color=dodgerblue1, fontcolor=white, style=filled];
+	"CSVPad" [label="CSVPad", shape=box, color=dodgerblue1, fontcolor=white, style=filled];
+	"Spearman" [label="Spearman", shape=box, color=dodgerblue1, fontcolor=white, style=filled];
+	"GPUATria" [label="GPUATria", shape=box, color=dodgerblue1, fontcolor=white, style=filled];
 }

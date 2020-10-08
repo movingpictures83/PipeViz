@@ -1,0 +1,17 @@
+# This script will recursively build a config file.
+# This is to handle external pipelines.
+
+config_file=$1
+output_file=$2
+
+while read line
+do
+  line_type=`echo $line | cut -d ' ' -f 1`
+  if [[ $line_type == "Pipelines" ]]
+  then
+    pipeline_file=`echo $line | cut -d ' ' -f 2`
+    normalize_config $pipeline_file $output_file
+  else
+    echo $line >> $output_file
+  fi
+done < $config_file

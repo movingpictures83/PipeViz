@@ -1,3 +1,3 @@
-inputfile	01_Parameters_DifferentFolder/abund.thresholded.csv
+inputfile	abund.thresholded.csv
 column		1
 value		C

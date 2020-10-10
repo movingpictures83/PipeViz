@@ -1,5 +1,10 @@
 # PipeViz
-Visualize a pipeline using a network
+Visualize a pipeline using a network.
+
+# Usage
+To create a ```.dot``` file, use the command ```viz_pipe configfilename```
+
+To generate a ```.png``` use ```viz_pipe configfilename png```
 
 # Environment Setup
 To get started run the following command:
@@ -27,6 +32,10 @@ The PipeViz bin folder must be exported to the ```PATH``` environment variable.
 
 # Writing Tests
 To write a test, simply create a file with the name ```expected.dot``` within one of the testing folders. This file should contain the expected output of executing ```viz_pipe```.
+
+Need to update an existing test?
+
+While in one of the testing directories, run the command ```update_test```.
 
 # Contributing
 Once you are ready to commit your code, use the command:

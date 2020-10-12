@@ -3,13 +3,8 @@ param_files=`parameter_files $1`
 while read line
 do
   line_type=`echo $line | cut -d ' ' -f 1`
-  if [[ $line_type != "Plugin" ]]
-  then
-    echo $line
-    continue
-  fi
   input_file=`echo $line | cut -d ' ' -f 4`
-  if ! [[ "$param_files" =~ "$input_file" ]]
+  if [[ $line_type != "Plugin" ]] || ! [[ "$param_files" =~ "$input_file" ]]
   then
     echo $line
     continue

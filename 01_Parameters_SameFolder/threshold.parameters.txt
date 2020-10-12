@@ -1,4 +1,4 @@
-inputfile	01_Parameters_SameFolder/abundRaw.csv
+inputfile	abundRaw.csv
 threshold	100
 normalize	true
 startcol	3

@@ -14,7 +14,7 @@ for file in `plugin_info $1 inputs`
 do
 	if ! [[ "$output_files" =~ "$file" ]]
 	then
-		if (grep -q $file launch.txt)
+		if ! (grep -q $file launch.txt)
 		then
 			echo $file
 		fi

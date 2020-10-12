@@ -5,8 +5,9 @@ then
 fi
 
 dot_file=$1.dot
-
-parse_pipe.awk $1 > $dot_file
+replace_parameter_files $1 > normalized_config.txt
+parse_pipe.awk normalized_config.txt > $dot_file
+rm normalized_config.txt
 
 if [[ $2 == png ]]
 then

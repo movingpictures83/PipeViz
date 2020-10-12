@@ -9,7 +9,8 @@ do
   echo "Testing: $test"
   total=$(( $total + 1 ))
   # Result will tell us how many lines are different between the expected dot file and the generated one.
-  result=`(cd $test ; viz_pipe config* ; cmp --silent expected.dot config*.dot) || echo 'fail'`
+  target_config=`cd $test ; head -n1 testtarget.txt`
+  result=`(cd $test ; viz_pipe $target_config ; cmp --silent expected.dot config*.dot) || echo 'fail'`
   if [[ "$result" =~ "fail" ]]
   then
     failed=$(( $failed + 1 ))

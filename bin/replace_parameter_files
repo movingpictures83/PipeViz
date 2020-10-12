@@ -1,0 +1,19 @@
+param_files=`parameter_files $1`
+
+while read line
+do
+  line_type=`echo $line | cut -d ' ' -f 1`
+  if [[ $line_type != "Plugin" ]]
+  then
+    echo $line
+    continue
+  fi
+  input_file=`echo $line | cut -d ' ' -f 4`
+  if ! [[ "$param_files" =~ "$input_file" ]]
+  then
+    echo $line
+    continue
+  fi
+  actual_input_file=`head -n1 $input_file | (egrep 'inputfile' || echo $input_file) | sed -l 's|inputfile||g'`
+  echo $line | sed "s|$input_file|$actual_input_file|g"
+done < $1

@@ -1,5 +1,5 @@
 # This script will fetch all input files from a configuration file. 
-# Then it will find all files that contain a line 'inputfile filename'.
+# Then it will find all files that contain a line 'inputfile filename' and will check that no files are in startFiles.txt
 
 if [[ $# != 1 ]]
 then
@@ -10,5 +10,8 @@ fi
 
 for file in `plugin_info $1 inputs`
 do
-	egrep -ls '^inputfile{1}	.*' $file
+	for file ! in 'plugin_info $1 outputs'
+	do
+		find startFiles.txt -not -name $file | (egrep -ls '^inputfile{1}	.*' $file)
+	done
 done

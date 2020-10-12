@@ -1,0 +1,17 @@
+digraph G {
+	node [style=bold]
+	"abundRaw.csv"->"0"->"abundRaw.normalized.csv";
+	"abundRaw.csv"->"1"->"abund.thresholded.csv";
+	"abund.thresholded.csv"->"2"->"normFileA.csv";
+	"abund.thresholded.csv"->"3"->"normFileF.csv";
+	"abund.thresholded.csv"->"4"->"normFileN.csv";
+	"abund.thresholded.csv"->"5"->"normFileNC.csv";
+	"abund.thresholded.csv"->"6"->"normFileC.csv";
+	"0" [label="CSVNormalize", shape=box, color=dodgerblue1, fontcolor=white, style=filled];
+	"1" [label="Threshold", shape=box, color=dodgerblue1, fontcolor=white, style=filled];
+	"2" [label="CSVExtract", shape=box, color=dodgerblue1, fontcolor=white, style=filled];
+	"3" [label="CSVExtract", shape=box, color=dodgerblue1, fontcolor=white, style=filled];
+	"4" [label="CSVExtract", shape=box, color=dodgerblue1, fontcolor=white, style=filled];
+	"5" [label="CSVExtract", shape=box, color=dodgerblue1, fontcolor=white, style=filled];
+	"6" [label="CSVExtract", shape=box, color=dodgerblue1, fontcolor=white, style=filled];
+}

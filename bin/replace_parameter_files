@@ -14,6 +14,6 @@ do
     echo $line
     continue
   fi
-  actual_input_file=`head -n1 $input_file | (egrep 'inputfile' || echo $input_file) | sed -l 's|inputfile||g'`
-  echo $line | sed "s|$input_file|$actual_input_file|g"
+  actual_input_file=`(egrep 'inputfile' $input_file || echo $input_file) | sed "s/inputfile//g"`
+  echo $line | awk -v actual="$actual_input_file" '{ if (length($0) == 0) next; $4 = actual; print }'
 done < $1

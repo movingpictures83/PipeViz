@@ -8,7 +8,12 @@ then
 	exit 1
 fi
 
+output_files=`plugin_info $1 outputs`
+
 for file in `plugin_info $1 inputs`
 do
-	egrep -ls '^inputfile{1}	.*' $file
+	if ! [[ "$output_files" =~ "$file" ]]
+	then
+		echo $file
+	fi
 done

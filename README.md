@@ -2,16 +2,16 @@
 Visualize a pipeline using a network.
 
 # Usage
-To create a ```.dot``` file, use the command ```viz_pipe configfilename```
+To create a ```.dot``` file, use ```viz_pipe configfilename```
 
-To generate a ```.png``` use ```viz_pipe configfilename png```
+To generate a ```.dot``` along with a ```.png``` use ```viz_pipe configfilename png```
 
 # Environment Setup
 To get started run the following command:
 
 ```cd bin ; . ./init_bin```
 
-If using ocelot ensure that your current shell is bash with:
+If using **ocelot** ensure that your current shell is bash with:
 
 ```echo $SHELL```
 
@@ -24,18 +24,27 @@ then
 ```cd bin ; source init_bin```
 
 # Testing
-To run tests run the following command within the root of the PipeViz directory:
+To run tests run the following command within the **root** of the PipeViz directory:
 
 ```run_tests```
 
 The PipeViz bin folder must be exported to the ```PATH``` environment variable.
 
+### Testing ```viz_pipe``` manually?
+
+**Protip**: Use ```clean_output``` to remove all generated output.
+
 # Writing Tests
-To write a test, simply create a file with the name ```expected.dot``` within one of the testing folders. This file should contain the expected output of executing ```viz_pipe```.
+To setup a directory for testing, create the files ```expected.dot``` and ```testtarget.txt``` within the directory.
 
-Need to update an existing test?
+The ```expected.dot``` file should contain the expected output of executing ```viz_pipe```.
 
-While in one of the testing directories, run the command ```update_test```.
+The ```testtarget.txt``` file should contain the name of the configuration file that will be used with ```viz_pipe```.
+
+
+### Need to update an existing ```expected.dot``` file?
+
+**Protip**: Use ```update_test``` to automatically update it.
 
 # Contributing
 Once you are ready to commit your code, use the command:

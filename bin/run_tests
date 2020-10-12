@@ -8,8 +8,9 @@ for test in `ls -d */ | egrep '^[0-9]{2}_.*'`
 do
   echo "Testing: $test"
   total=$(( $total + 1 ))
+  target_config=`cd $test ; head -n1 testtarget.txt`
   # Result will tell us how many lines are different between the expected dot file and the generated one.
-  result=`(cd $test ; viz_pipe config* ; cmp --silent expected.dot config*.dot) || echo 'fail'`
+  result=`(cd $test ; viz_pipe $target_config 2>/dev/null ; cmp --silent expected.dot config*.dot) || echo 'fail'`
   if [[ "$result" =~ "fail" ]]
   then
     failed=$(( $failed + 1 ))

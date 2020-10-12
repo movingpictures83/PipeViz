@@ -30,6 +30,10 @@ To run tests run the following command within the root of the PipeViz directory:
 
 The PipeViz bin folder must be exported to the ```PATH``` environment variable.
 
+Testing ```viz_pipe``` manually?
+
+Protip: Use ```clean_output``` to remove all generated output.
+
 # Writing Tests
 To write a test, simply create a file with the name ```expected.dot``` within one of the testing folders. This file should contain the expected output of executing ```viz_pipe```.
 

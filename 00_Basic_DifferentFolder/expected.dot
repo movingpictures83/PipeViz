@@ -1,5 +1,5 @@
 digraph G {
-	node [style=bold]
+	node [style=bold];
 	"abund.csv"->"0"->"abund.norm.csv";
 	"abund.norm.csv"->"1"->"spearman.csv";
 	"spearman.csv"->"2"->"Networks/network.csv";

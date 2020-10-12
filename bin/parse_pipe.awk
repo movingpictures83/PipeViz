@@ -1,7 +1,7 @@
 #! /usr/bin/awk -f
 
 BEGIN {
-  print "digraph G {\n\tnode [style=bold]";
+  print "digraph G {\n\tnode [style=bold];";
   pluginId = 0;
 }
 

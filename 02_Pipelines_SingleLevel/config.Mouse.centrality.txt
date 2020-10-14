@@ -1,3 +1,3 @@
-Prefix 02_Pipelines_OneLevel
+Prefix 02_Pipelines_SingleLevel
 Plugin GPUATria inputfile network.csv outputfile ATria.gpu.noa
 Plugin ATria inputfile network.csv outputfile ATria.noa

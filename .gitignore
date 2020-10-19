@@ -2,3 +2,4 @@
 *.dot.png
 config*.dot
 normalized_config.txt
+flat_config.txt

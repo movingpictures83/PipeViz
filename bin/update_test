@@ -1,2 +1,2 @@
 # Use this script to update the expected.dot file of a test
-viz_pipe config* ; mv config*.dot expected.dot
+viz_pipe `head -n1 testtarget.txt` ; mv config*.dot expected.dot

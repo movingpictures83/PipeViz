@@ -2,16 +2,15 @@
 # This is to handle external pipelines.
 
 config_file=$1
-output_file=$2
 
 while read line
 do
   line_type=`echo $line | cut -d ' ' -f 1`
-  if [[ $line_type == "Pipelines" ]]
+  if [[ $line_type == "Pipeline" ]]
   then
     pipeline_file=`echo $line | cut -d ' ' -f 2`
-    normalize_config $pipeline_file $output_file
+    normalize_config $pipeline_file
   else
-    echo $line >> $output_file
+    echo $line
   fi
 done < $config_file

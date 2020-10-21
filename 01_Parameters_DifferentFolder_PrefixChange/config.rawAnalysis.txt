@@ -1,0 +1,15 @@
+Prefix 01_Parameters_DifferentFolder/
+Plugin CSVNormalize inputfile abundRaw.csv outputfile abundRaw.normalized.csv
+Plugin Threshold inputfile threshold.parameters.txt outputfile abund.thresholded.csv 
+Prefix 01_Parameters/DifferentFolder/A
+Plugin CSVExtract inputfile extract.A.txt outputfile normFileA.csv
+Prefix 01_Parameters/DifferentFolder/F
+Plugin CSVExtract inputfile extract.F.txt outputfile normFileF.csv
+Prefix 01_Parameters/DifferentFolder/N
+Plugin CSVExtract inputfile extract.N.txt outputfile normFileN.csv
+Prefix 01_Parameters/DifferentFolder/NC
+Plugin CSVExtract inputfile extract.NC.txt outputfile normFileNC.csv
+Prefix 01_Parameters/DifferentFolder/C
+Plugin CSVExtract inputfile extract.C.txt outputfile normFileC.csv
+
+

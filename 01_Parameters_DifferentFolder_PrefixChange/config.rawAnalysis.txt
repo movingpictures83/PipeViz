@@ -1,15 +1,15 @@
-Prefix 01_Parameters_DifferentFolder/
+Prefix 01_Parameters_DifferentFolder_PrefixChange/
 Plugin CSVNormalize inputfile abundRaw.csv outputfile abundRaw.normalized.csv
 Plugin Threshold inputfile threshold.parameters.txt outputfile abund.thresholded.csv 
-Prefix 01_Parameters/DifferentFolder/A
+Prefix 01_Parameters_DifferentFolder_PrefixChange/A
 Plugin CSVExtract inputfile extract.A.txt outputfile normFileA.csv
-Prefix 01_Parameters/DifferentFolder/F
+Prefix 01_Parameters_DifferentFolder_PrefixChange/F
 Plugin CSVExtract inputfile extract.F.txt outputfile normFileF.csv
-Prefix 01_Parameters/DifferentFolder/N
+Prefix 01_Parameters_DifferentFolder_PrefixChange/N
 Plugin CSVExtract inputfile extract.N.txt outputfile normFileN.csv
-Prefix 01_Parameters/DifferentFolder/NC
+Prefix 01_Parameters_DifferentFolder_PrefixChange/NC
 Plugin CSVExtract inputfile extract.NC.txt outputfile normFileNC.csv
-Prefix 01_Parameters/DifferentFolder/C
+Prefix 01_Parameters_DifferentFolder_PrefixChange/C
 Plugin CSVExtract inputfile extract.C.txt outputfile normFileC.csv
 
 

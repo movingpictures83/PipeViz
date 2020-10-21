@@ -1,0 +1,8 @@
+Prefix 00_Basic_DifferentFolder/
+Plugin CSVNormalize inputfile abund.csv outputfile abund.norm.csv
+Plugin Spearman inputfile abund.norm.csv outputfile spearman.csv
+Plugin CSVPad inputfile spearman.csv outputfile Networks/network.csv
+Plugin GPUATria inputfile Networks/network.csv outputfile ATria.noa
+Prefix 00_Basic_DifferentFolder/Networks
+Plugin CSV2GML inputfile network.csv outputfile network.gml
+

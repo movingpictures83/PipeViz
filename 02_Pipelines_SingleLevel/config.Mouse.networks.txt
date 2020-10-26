@@ -1,4 +1,4 @@
-Prefix 02_Pipelines_SingleLevel
+Prefix 02_Pipelines_SingleLevel/
 Plugin Spearman inputfile abund.norm.csv outputfile spearman.csv
 Plugin CSVPad inputfile spearman.csv outputfile network.csv
 Plugin CSV2GML inputfile network.csv outputfile network.gml

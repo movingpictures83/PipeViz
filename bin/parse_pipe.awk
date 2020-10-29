@@ -6,7 +6,11 @@ BEGIN {
 }
 
 /Plugin/ {
-  printf("\t\"%s\"->\"%s\"->\"%s\";\n", $4, pluginId, $6);
+  inputFirstPath = match($4, "/")
+  inputFile = substr($4, inputFirstPath + 1, length($4));
+  outputFirstPath = match($6, "/")
+  outputFile = substr($6, outputFirstPath + 1, length($6));
+  printf("\t\"%s\"->\"%s\"->\"%s\";\n", inputFile, pluginId, outputFile);
   plugins[pluginId++] = $2;
 }
 

@@ -1,5 +1,5 @@
 # Metagenomics analysis pipeline: Early
-Prefix 02_Pipelines_MultiLevel/data/Early
+Prefix 02_Pipelines_MultiLevel/data/Early/
 Plugin CSVNormalize inputfile abund.csv outputfile abundN.csv
-Pipeline 02_Pipelines_MultiLevel/data/Early/config.Early.networks.txt
-Pipeline 02_Pipelines_MultiLevel/data/Early/config.Early.centrality.txt
+Pipeline config.Early.networks.txt
+Pipeline config.Early.centrality.txt

@@ -9,11 +9,7 @@ BEGIN {
         next;
     }
     if ($1 == "Prefix" ) {
-        firstPrefix = match($2, "/")
-        prefix = substr($2, firstPrefix + 1, length($2));
-        if (length(prefix) > 0) {
-            prefix = prefix"/"
-        }
+        prefix = $2;
         next;
     }
     if ($1 != "Plugin") next;

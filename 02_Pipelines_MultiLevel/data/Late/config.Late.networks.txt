@@ -1,4 +1,4 @@
-Prefix 02_Pipelines_OneLevel/data/Early/Networks/
-Plugin Spearman inputfile ../abund.norm.csv outputfile spearman.csv
+Prefix 02_Pipelines_MultiLevel/data/Late/Networks/
+Plugin Spearman inputfile ../abundN.csv outputfile spearman.csv
 Plugin CSVPad inputfile spearman.csv outputfile network.csv
 Plugin CSV2GML inputfile network.csv outputfile network.gml

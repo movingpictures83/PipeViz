@@ -1,3 +1,2 @@
-config.Early.txt
-config.Late.txt
-abund.csv
+02_Pipelines_MultiLevel/data/Early/abund.csv
+02_Pipelines_MultiLevel/data/Late/abund.csv

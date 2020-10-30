@@ -2,5 +2,3 @@
 *.dot.png
 config*.dot
 normalized_config.txt
-normalized_prefixes.txt
-flat_config.txt

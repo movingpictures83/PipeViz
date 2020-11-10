@@ -1,15 +1,15 @@
-Prefix 03_Kitties_NoPipelines
+Prefix 03_Kitties_NoPipelines/
 Plugin CSVNormalize inputfile abundRaw.csv outputfile abundRaw.normalized.csv
 Plugin Threshold inputfile threshold.parameters.txt outputfile abund.thresholded.csv 
-Kitty A
+Kitty A/
 Plugin CSVExtract inputfile extract.txt outputfile normFile.csv
-Kitty F
+Kitty F/
 Plugin CSVExtract inputfile extract.txt outputfile normFile.csv
-Kitty N
+Kitty N/
 Plugin CSVExtract inputfile extract.txt outputfile normFile.csv
-Kitty C
+Kitty C/
 Plugin CSVExtract inputfile extract.txt outputfile normFile.csv
-Kitty NC
+Kitty NC/
 Plugin CSVExtract inputfile extract.txt outputfile normFile.csv
 
 

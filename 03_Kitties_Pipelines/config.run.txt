@@ -1,5 +1,5 @@
 Plugin CSVNormalize inputfile abund.csv outputfile abundN.csv
 Kitty Networks
-Pipeline 03_Kitties_Pipelines/data/Earlyconfig.Early.networks.txt
+Pipeline PipeViz/03_Kitties_Pipelines/config.networks.txt
 Kitty .
-Pipeline 03_Kitties_Pipelines/data/Early/config.Early.centrality.txt
+Pipeline PipeViz/03_Kitties_Pipelines/config.centrality.txt

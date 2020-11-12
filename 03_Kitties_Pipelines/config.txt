@@ -1,5 +1,5 @@
-Prefix PipeViz/03_Kitties_Pipelines/
-Kitty data/Early
-Pipeline PipeViz/03_Kitties_Pipelines/config.run.txt
-Kitty data/Late
-Pipeline PipeViz/03_Kitties_Pipelines/config.run.txt
+Prefix 03_Kitties_Pipelines/
+Kitty data/Early/
+Pipeline 03_Kitties_Pipelines/config.run.txt
+Kitty data/Late/
+Pipeline 03_Kitties_Pipelines/config.run.txt

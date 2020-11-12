@@ -9,8 +9,10 @@ do
   line_type=`echo $line | cut -d ' ' -f 1`
   if [[ $line_type == "Pipeline" ]]
   then
+    echo "# StartOfPipeline"
     pipeline_file=`echo $line | cut -d ' ' -f 2`
-    normalize_config ../$prefix$pipeline_file
+    normalize_config ../$pipeline_file
+    echo "# EndOfPipeline"
   elif [[ $line_type == "Prefix" ]]
   then
     prefix=`echo $line | cut -d ' ' -f 2`

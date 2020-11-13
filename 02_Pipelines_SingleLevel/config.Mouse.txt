@@ -1,4 +1,4 @@
 Prefix 02_Pipelines_SingleLevel/
 Plugin CSVNormalize inputfile abund.csv outputfile abund.norm.csv
-Pipeline config.Mouse.networks.txt
-Pipeline config.Mouse.centrality.txt
+Pipeline 02_Pipelines_SingleLevel/config.Mouse.networks.txt
+Pipeline 02_Pipelines_SingleLevel/config.Mouse.centrality.txt

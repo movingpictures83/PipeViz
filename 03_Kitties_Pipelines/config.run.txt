@@ -1,4 +1,4 @@
-Plugin CSVNormalize inputfile abund.csv outputfile abundN.csv
+Plugin CSVNormalize inputfile abund.csv outputfile abund.norm.csv
 Kitty Networks
 Pipeline PipeViz/03_Kitties_Pipelines/config.networks.txt
 Kitty .

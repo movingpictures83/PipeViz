@@ -1,0 +1,5 @@
+# Metagenomics analysis pipeline: Late
+Prefix PipeViz/02_Pipelines_MultiLevel/data/Late/
+Plugin CSVNormalize inputfile abund.csv outputfile abundN.csv
+Pipeline PipeViz/02_Pipelines_MultiLevel/data/Late/config.Late.networks.txt
+Pipeline PipeViz/02_Pipelines_MultiLevel/data/Late/config.Late.centrality.txt

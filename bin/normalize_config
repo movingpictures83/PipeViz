@@ -2,7 +2,6 @@
 # This is to handle external pipelines.
 
 config_file=$1
-prefix=""
 
 while read line
 do
@@ -13,10 +12,6 @@ do
     pipeline_file=`echo $line | cut -d ' ' -f 2`
     normalize_config ../$pipeline_file
     echo "# EndOfPipeline"
-  elif [[ $line_type == "Prefix" ]]
-  then
-    prefix=`echo $line | cut -d ' ' -f 2`
-    echo $line
   else
     echo $line
   fi

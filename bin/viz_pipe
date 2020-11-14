@@ -6,7 +6,7 @@ fi
 
 dot_file=$1.dot
 (normalize_config $1 | normalize_prefixes.awk | normalize_paths.awk) > normalized_config.txt
-((replace_parameter_files normalized_config.txt) | parse_pipe.awk) > $dot_file
+((replace_parameter_files normalized_config.txt) | normalize_paths.awk | parse_pipe.awk) > $dot_file
 rm normalized_config.txt
 
 if [[ $2 == png ]]

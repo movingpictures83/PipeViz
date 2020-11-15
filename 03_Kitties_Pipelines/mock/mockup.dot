@@ -1,0 +1,27 @@
+digraph G {
+        node [style=bold];
+        "03_Kitties_Pipelines/data/Early/abund.csv"->"0"->"03_Kitties_Pipelines/data/Early/abund.norm.csv";
+        "03_Kitties_Pipelines/data/Early/abund.norm.csv"->"1"->"03_Kitties_Pipelines/data/Early/Networks/spearman.csv";
+        "03_Kitties_Pipelines/data/Early/Networks/spearman.csv"->"2"->"03_Kitties_Pipelines/data/Early/Networks/network.csv";
+        "03_Kitties_Pipelines/data/Early/Networks/network.csv"->"3"->"03_Kitties_Pipelines/data/Early/Networks/network.gml";
+        "03_Kitties_Pipelines/data/Early/Networks/network.csv"->"4"->"03_Kitties_Pipelines/data/Early/ATria.gpu.noa";
+        "03_Kitties_Pipelines/data/Early/Networks/network.csv"->"5"->"03_Kitties_Pipelines/data/Early/ATria.noa";
+        "03_Kitties_Pipelines/data/Late/abund.csv"->"6"->"03_Kitties_Pipelines/data/Late/abund.norm.csv";
+        "03_Kitties_Pipelines/data/Late/abund.norm.csv"->"7"->"03_Kitties_Pipelines/data/Late/Networks/spearman.csv";
+        "03_Kitties_Pipelines/data/Late/Networks/spearman.csv"->"8"->"03_Kitties_Pipelines/data/Late/Networks/network.csv";
+        "03_Kitties_Pipelines/data/Late/Networks/network.csv"->"9"->"03_Kitties_Pipelines/data/Late/Networks/network.gml";
+        "03_Kitties_Pipelines/data/Late/Networks/network.csv"->"10"->"03_Kitties_Pipelines/data/Late/ATria.gpu.noa";
+        "03_Kitties_Pipelines/data/Late/Networks/network.csv"->"11"->"03_Kitties_Pipelines/data/Late/ATria.noa";
+        "0" [label="CSVNormalize", shape=box, color=dodgerblue1, fontcolor=white, style=filled];
+        "1" [label="Spearman", shape=box, color=dodgerblue1, fontcolor=white, style=filled];
+        "2" [label="CSVPad", shape=box, color=dodgerblue1, fontcolor=white, style=filled];
+        "3" [label="CSV2GML", shape=box, color=dodgerblue1, fontcolor=white, style=filled];
+        "4" [label="GPUATria", shape=box, color=dodgerblue1, fontcolor=white, style=filled];
+        "5" [label="ATria", shape=box, color=dodgerblue1, fontcolor=white, style=filled];
+        "6" [label="CSVNormalize", shape=box, color=dodgerblue1, fontcolor=white, style=filled];
+        "7" [label="Spearman", shape=box, color=dodgerblue1, fontcolor=white, style=filled];
+        "8" [label="CSVPad", shape=box, color=dodgerblue1, fontcolor=white, style=filled];
+        "9" [label="CSV2GML", shape=box, color=dodgerblue1, fontcolor=white, style=filled];
+        "10" [label="GPUATria", shape=box, color=dodgerblue1, fontcolor=white, style=filled];
+        "11" [label="ATria", shape=box, color=dodgerblue1, fontcolor=white, style=filled];
+}

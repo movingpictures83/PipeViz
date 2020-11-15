@@ -1,0 +1,17 @@
+digraph G {
+        node [style=bold];
+        "03_Kitties_NoPipelines/abundRaw.csv"->"0"->"03_Kitties_NoPipelines/abundRaw.normalized.csv";
+        "03_Kitties_NoPipelines/abundRaw.csv"->"1"->"03_Kitties_NoPipelines/abund.thresholded.csv";
+        "03_Kitties_NoPipelines/abund.thresholded.csv"->"2"->"03_Kitties_NoPipelines/A/normFile.csv";
+        "03_Kitties_NoPipelines/abund.thresholded.csv"->"3"->"03_Kitties_NoPipelines/F/normFile.csv";
+        "03_Kitties_NoPipelines/abund.thresholded.csv"->"4"->"03_Kitties_NoPipelines/N/normFile.csv";
+        "03_Kitties_NoPipelines/abund.thresholded.csv"->"5"->"03_Kitties_NoPipelines/C/normFile.csv";
+        "03_Kitties_NoPipelines/abund.thresholded.csv"->"6"->"03_Kitties_NoPipelines/NC/normFile.csv";
+        "0" [label="CSVNormalize", shape=box, color=dodgerblue1, fontcolor=white, style=filled];
+        "1" [label="Threshold", shape=box, color=dodgerblue1, fontcolor=white, style=filled];
+        "2" [label="CSVExtract", shape=box, color=dodgerblue1, fontcolor=white, style=filled];
+        "3" [label="CSVExtract", shape=box, color=dodgerblue1, fontcolor=white, style=filled];
+        "4" [label="CSVExtract", shape=box, color=dodgerblue1, fontcolor=white, style=filled];
+        "5" [label="CSVExtract", shape=box, color=dodgerblue1, fontcolor=white, style=filled];
+        "6" [label="CSVExtract", shape=box, color=dodgerblue1, fontcolor=white, style=filled];
+}

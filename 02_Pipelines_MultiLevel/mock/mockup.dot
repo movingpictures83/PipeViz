@@ -1,0 +1,27 @@
+digraph G {
+        node [style=bold];
+        "data/Early/abund.csv"->"0"->"data/Early/abundN.csv";
+        "data/Early/abundN.csv"->"1"->"data/Early/Networks/spearman.csv";
+        "data/Early/Networks/spearman.csv"->"2"->"data/Early/Networks/network.csv";
+        "data/Early/Networks/network.csv"->"3"->"data/Early/Networks/network.gml";
+        "data/Early/Networks/network.csv"->"4"->"data/Early/ATria.gpu.noa";
+        "data/Early/Networks/network.csv"->"5"->"data/Early/ATria.noa";
+        "data/Late/abund.csv"->"6"->"data/Late/abundN.csv";
+        "data/Late/abundN.csv"->"7"->"data/Late/Networks/spearman.csv";
+        "data/Late/Networks/spearman.csv"->"8"->"data/Late/Networks/network.csv";
+        "data/Late/Networks/network.csv"->"9"->"data/Late/Networks/network.gml";
+        "data/Late/Networks/network.csv"->"10"->"data/Late/ATria.gpu.noa";
+        "data/Late/Networks/network.csv"->"11"->"data/Late/ATria.noa";
+        "0" [label="CSVNormalize", shape=box, color=dodgerblue1, fontcolor=white, style=filled];
+        "1" [label="Spearman", shape=box, color=dodgerblue1, fontcolor=white, style=filled];
+        "2" [label="CSVPad", shape=box, color=dodgerblue1, fontcolor=white, style=filled];
+        "3" [label="CSV2GML", shape=box, color=dodgerblue1, fontcolor=white, style=filled];
+        "4" [label="GPUATria", shape=box, color=dodgerblue1, fontcolor=white, style=filled];
+        "5" [label="ATria", shape=box, color=dodgerblue1, fontcolor=white, style=filled];
+        "6" [label="CSVNormalize", shape=box, color=dodgerblue1, fontcolor=white, style=filled];
+        "7" [label="Spearman", shape=box, color=dodgerblue1, fontcolor=white, style=filled];
+        "8" [label="CSVPad", shape=box, color=dodgerblue1, fontcolor=white, style=filled];
+        "9" [label="CSV2GML", shape=box, color=dodgerblue1, fontcolor=white, style=filled];
+        "10" [label="GPUATria", shape=box, color=dodgerblue1, fontcolor=white, style=filled];
+        "11" [label="ATria", shape=box, color=dodgerblue1, fontcolor=white, style=filled];
+}

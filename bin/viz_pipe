@@ -1,3 +1,6 @@
+# Generates dot file and png from config file
+# usage: viz_pipe config_file [png]
+
 if [[ ! -e $1 ]]
 then
   printf "File $1 not found.\n"

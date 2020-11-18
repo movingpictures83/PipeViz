@@ -1,2 +1,4 @@
 # This script will only return valid plugins. 
+# usage: valid_plugins config_file
+
 grep -E '^Plugin{1} [^ ]* inputfile{1} [^ ]* outputfile{1} [^ ]*' $*

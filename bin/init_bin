@@ -1,4 +1,6 @@
 # This script will export the PipeViz bin folder to the PATH environment variable.
+# usage: init_bin
+
 export PATH=$PATH:`pwd`
 echo "Successfully added `pwd` to PATH."
 chmod 755 ./*

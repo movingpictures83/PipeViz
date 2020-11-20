@@ -1,0 +1,22 @@
+Plugin CSVRemove inputfile ../../../../../remove.txt outputfile IBD.all.norm.csv
+Plugin TaxonomySplit inputfile IBD.all.norm.csv outputfile IBD.all.norm
+
+Plugin CSVMerge inputfile ../../../../../files.taxonomic.txt outputfile all/IBD.all.norm.withdiagnosis.csv
+Plugin CSVMerge inputfile ../../../../../files.phylum.txt outputfile phylum/IBD.all.norm.withdiagnosis.csv
+Plugin CSVMerge inputfile ../../../../../files.class.txt outputfile class/IBD.all.norm.withdiagnosis.csv
+Plugin CSVMerge inputfile ../../../../../files.order.txt outputfile order/IBD.all.norm.withdiagnosis.csv
+Plugin CSVMerge inputfile ../../../../../files.family.txt outputfile family/IBD.all.norm.withdiagnosis.csv
+Plugin CSVMerge inputfile ../../../../../files.genus.txt outputfile genus/IBD.all.norm.withdiagnosis.csv
+
+Plugin CSVScreen inputfile ../../../../../screen.familyV.txt outputfile IBD.all.norm.familyV.tmp.csv
+Plugin RemoveZero inputfile IBD.all.norm.familyV.tmp.csv outputfile familyV/IBD.all.norm.withdiagnosis.csv
+
+Plugin CSVScreen inputfile ../../../../../screen.genusV.txt outputfile IBD.all.norm.genusV.tmp.csv
+Plugin RemoveZero inputfile IBD.all.norm.genusV.tmp.csv outputfile genusV/IBD.all.norm.withdiagnosis.csv
+
+Plugin CSVScreen inputfile ../../../../../screen.familyNoV.txt outputfile IBD.all.norm.familyNoV.tmp.csv
+Plugin RemoveZero inputfile IBD.all.norm.familyNoV.tmp.csv outputfile familyNoV/IBD.all.norm.withdiagnosis.csv
+
+Plugin CSVScreen inputfile ../../../../../screen.genusNoV.txt outputfile IBD.all.norm.genusNoV.tmp.csv
+Plugin RemoveZero inputfile IBD.all.norm.genusNoV.tmp.csv outputfile genusNoV/IBD.all.norm.withdiagnosis.csv
+

@@ -1,0 +1,3 @@
+Plugin CSVTranspose inputfile IBD.all.norm.withdiagnosis.csv outputfile IBD.all.norm.withdiagnosis.transpose.csv
+Plugin CSV2Tab inputfile IBD.all.norm.withdiagnosis.transpose.csv outputfile IBD.all.norm.withdiagnosis.transpose.txt
+Plugin LEfSe inputfile ../../../../../../parameters.lefse.txt outputfile IBD.lefse

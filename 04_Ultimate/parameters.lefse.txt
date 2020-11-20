@@ -1,0 +1,5 @@
+inputfile	IBD.all.norm.withdiagnosis.transpose.txt
+class	2
+subclass	-1
+subject	1
+outputdir	biomarkers_raw_images

@@ -1,0 +1,3 @@
+Plugin ClusterCount inputfile ../../../../../../IBD.cc.txt outputfile none
+Plugin Tightness inputfile ../../../../../../IBD.tightness.txt outputfile IBD.tightness
+Plugin TightnessStatistics inputfile IBD.tightness outputfile IBD.tightness.statistics.csv

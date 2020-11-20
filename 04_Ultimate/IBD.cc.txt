@@ -1,0 +1,2 @@
+inputfile	IBD.AP.csv
+threshold	2	

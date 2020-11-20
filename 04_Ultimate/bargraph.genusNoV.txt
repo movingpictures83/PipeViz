@@ -1,0 +1,4 @@
+otufile	genusNoV/IBD.norm.transpose.csv
+mapping	../../../diagnosis.withlocation.csv
+tree	../../../IBD.all.norm.tax.csv
+column	genus

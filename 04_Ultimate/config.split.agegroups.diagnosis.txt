@@ -1,0 +1,21 @@
+##################################################################################### 
+# ADULT
+Plugin CSVExtract inputfile ../../extract.sinai.diagnosis.txt outputfile IBD.sinai.csv
+Plugin CSVExtract inputfile ../../extract.MGH.diagnosis.txt outputfile IBD.MGH.csv
+Plugin CSVMerge inputfile ../../files.adult.txt outputfile IBD.tmp.tmp.csv
+Plugin CSVExtract inputfile ../../extract.CD.diagnosis.txt outputfile Networks/CD/Adult/diagnosis.withlocation.csv
+Plugin CSVExtract inputfile ../../extract.UC.diagnosis.txt outputfile Networks/UC/Adult/diagnosis.withlocation.csv
+Plugin CSVExtract inputfile ../../extract.nonIBD.diagnosis.txt outputfile Networks/nonIBD/Adult/diagnosis.withlocation.csv
+Plugin CSVRemove inputfile ../../remove.txt outputfile Biomarkers/LEfSe/Adult/diagnosis.csv
+#####################################################################################
+
+#####################################################################################
+# PEDIATRICS
+Plugin CSVExtract inputfile ../../extract.cincinnati.diagnosis.txt outputfile IBD.cincinnati.csv
+Plugin CSVExtract inputfile ../../extract.MGHped.diagnosis.txt outputfile IBD.MGHped.csv
+Plugin CSVMerge inputfile ../../files.pediatrics.txt outputfile IBD.tmp.tmp.csv
+Plugin CSVExtract inputfile ../../extract.CD.diagnosis.txt outputfile Networks/CD/Pediatrics/diagnosis.withlocation.csv
+Plugin CSVExtract inputfile ../../extract.UC.diagnosis.txt outputfile Networks/UC/Pediatrics/diagnosis.withlocation.csv
+Plugin CSVExtract inputfile ../../extract.nonIBD.diagnosis.txt outputfile Networks/nonIBD/Pediatrics/diagnosis.withlocation.csv
+Plugin CSVRemove inputfile ../../remove.txt outputfile Biomarkers/LEfSe/Pediatrics/diagnosis.csv
+#####################################################################################

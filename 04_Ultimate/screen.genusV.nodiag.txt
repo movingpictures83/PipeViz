@@ -1,0 +1,4 @@
+csvfile	IBD.csv
+taxon	"__Veillonella"
+level	genus
+criteria	nonzero

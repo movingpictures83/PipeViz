@@ -1,0 +1,3 @@
+inputfile	IBD.tmp.tmp.csv
+column	3
+value	nonIBD

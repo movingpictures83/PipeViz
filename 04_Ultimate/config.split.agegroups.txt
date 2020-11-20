@@ -1,0 +1,13 @@
+##################################################################################### 
+# ADULT
+Plugin CSVExtract inputfile ../../../../extract.sinai.txt outputfile IBD.sinai.csv
+Plugin CSVExtract inputfile ../../../../extract.MGH.txt outputfile IBD.MGH.csv
+Plugin CSVMerge inputfile ../../../../files.adult.txt outputfile Adult/IBD.tmp.tmp.csv
+#####################################################################################
+
+#####################################################################################
+# PEDIATRICS
+Plugin CSVExtract inputfile ../../../../extract.cincinnati.txt outputfile IBD.cincinnati.csv
+Plugin CSVExtract inputfile ../../../../extract.MGHped.txt outputfile IBD.MGHped.csv
+Plugin CSVMerge inputfile ../../../../files.pediatrics.txt outputfile Pediatrics/IBD.tmp.tmp.csv
+#####################################################################################

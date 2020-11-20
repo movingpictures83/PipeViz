@@ -1,0 +1,40 @@
+############################################################################
+# NORMALIZE DATA
+Plugin CSVNormalize inputfile IBD.csv outputfile IBD.norm.csv
+############################################################################
+
+################################################################################
+#
+# CORRELATIONS
+Plugin Pearson inputfile IBD.norm.csv outputfile IBD.pearson.unthresholded.csv # RUN ONCE WITH P=1
+Plugin Pearson inputfile IBD.norm.csv outputfile IBD.pearson.unpadded.csv
+Plugin CSVPad inputfile IBD.pearson.unpadded.csv outputfile IBD.pearson.csv
+#################################################################################
+
+################################################################################
+#
+# CLUSTERING
+Plugin AffinityPropagation inputfile IBD.pearson.csv outputfile IBD
+Plugin ClusterCSV2NOA inputfile IBD.AP.csv outputfile IBD.AP.noa
+#################################################################################
+
+################################################################################
+#
+# CENTRALITY
+Plugin ATria inputfile IBD.pearson.csv outputfile IBD.ATria.noa
+#################################################################################
+
+
+#################################################################################
+#
+# FORMATS FOR CYTOSCAPE
+Plugin CSV2GML inputfile IBD.pearson.csv outputfile IBD.pearson.gml
+#################################################################################
+
+
+#################################################################################
+#
+# OTHER ANALYSIS
+Plugin CSVNegOnly inputfile IBD.pearson.csv outputfile IBD.pearson.neg.eda
+Plugin Abundance inputfile IBD.norm.csv outputfile IBD.averagecounts.noa
+#################################################################################

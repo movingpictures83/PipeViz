@@ -1,0 +1,3 @@
+inputfile	diagnosis.withlocation.csv
+column	2
+value	Cedars-Sinai

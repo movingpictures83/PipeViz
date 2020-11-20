@@ -1,0 +1,48 @@
+#################################################################################
+# SPLIT INTO THREE GROUPS:
+#
+# CROHN'S DISEASE (CD)
+# ULCERATIVE COLITIS (UC)
+# CONTROL (nonIBD)
+
+Plugin CSVExtract inputfile ../../extract.CD.txt outputfile Networks/CD/All/IBD.tmp.tmp.csv
+Plugin CSVExtract inputfile ../../extract.UC.txt outputfile Networks/UC/All/IBD.tmp.tmp.csv
+Plugin CSVExtract inputfile ../../extract.nonIBD.txt outputfile Networks/nonIBD/All/IBD.tmp.tmp.csv
+
+Plugin CSVMerge inputfile ../../files.location.diagnosis.txt outputfile IBD.tmp.tmp.csv
+Plugin CSVExtract inputfile ../../extract.CD.diagnosis.txt outputfile Networks/CD/All/diagnosis.withlocation.csv
+Plugin CSVExtract inputfile ../../extract.UC.diagnosis.txt outputfile Networks/UC/All/diagnosis.withlocation.csv
+Plugin CSVExtract inputfile ../../extract.nonIBD.diagnosis.txt outputfile Networks/nonIBD/All/diagnosis.withlocation.csv
+
+Kitty Networks/CD
+Pipeline pipelines/IBD/config.split.agegroups.txt
+Kitty Networks/UC
+Pipeline pipelines/IBD/config.split.agegroups.txt
+Kitty Networks/nonIBD
+Pipeline pipelines/IBD/config.split.agegroups.txt
+
+################################################################################
+
+#################################################################################
+# RUN ANALYSIS ON EVERY GROUP
+#
+Kitty Networks/CD/All
+Pipeline pipelines/IBD/config.run.agegroups.txt
+Kitty Networks/CD/Adult
+Pipeline pipelines/IBD/config.run.agegroups.txt
+Kitty Networks/CD/Pediatrics
+Pipeline pipelines/IBD/config.run.agegroups.txt
+Kitty Networks/UC/All
+Pipeline pipelines/IBD/config.run.agegroups.txt
+Kitty Networks/UC/Adult
+Pipeline pipelines/IBD/config.run.agegroups.txt
+Kitty Networks/UC/Pediatrics
+Pipeline pipelines/IBD/config.run.agegroups.txt
+Kitty Networks/nonIBD/All
+Pipeline pipelines/IBD/config.run.agegroups.txt
+Kitty Networks/nonIBD/Adult
+Pipeline pipelines/IBD/config.run.agegroups.txt
+Kitty Networks/nonIBD/Pediatrics
+Pipeline pipelines/IBD/config.run.agegroups.txt
+###############################################################################
+

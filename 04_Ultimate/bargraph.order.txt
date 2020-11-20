@@ -1,0 +1,4 @@
+otufile	IBD.norm.transpose.csv
+mapping	diagnosis.withlocation.csv
+tree	IBD.csv.tax.csv
+column	order

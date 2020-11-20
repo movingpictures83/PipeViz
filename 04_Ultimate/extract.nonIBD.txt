@@ -1,0 +1,3 @@
+inputfile	IBD.all.withdiagnosis.withlocation.csv
+column	3
+value	nonIBD

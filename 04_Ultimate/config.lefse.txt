@@ -1,0 +1,79 @@
+################################################################################
+# LEFSE
+Plugin TaxonomySplit inputfile IBD.all.norm.csv outputfile IBD.all.norm
+
+Kitty Biomarkers/LEfSe
+Pipeline pipelines/IBD/config.split.agegroups.txt
+
+Kitty Biomarkers/LEfSe/All
+Pipeline pipelines/IBD/config.setup.lefse.txt
+
+Kitty Biomarkers/LEfSe/Adult
+Pipeline pipelines/IBD/config.setup.lefse.txt
+
+Kitty Biomarkers/LEfSe/Pediatrics
+Pipeline pipelines/IBD/config.setup.lefse.txt
+
+Kitty Biomarkers/LEfSe/All/all
+Pipeline pipelines/IBD/config.run.lefse.txt
+Kitty Biomarkers/LEfSe/All/phylum
+Pipeline pipelines/IBD/config.run.lefse.txt
+Kitty Biomarkers/LEfSe/All/class
+Pipeline pipelines/IBD/config.run.lefse.txt
+Kitty Biomarkers/LEfSe/All/order
+Pipeline pipelines/IBD/config.run.lefse.txt
+Kitty Biomarkers/LEfSe/All/family
+Pipeline pipelines/IBD/config.run.lefse.txt
+Kitty Biomarkers/LEfSe/All/familyV
+Pipeline pipelines/IBD/config.run.lefse.txt
+Kitty Biomarkers/LEfSe/All/genus
+Pipeline pipelines/IBD/config.run.lefse.txt
+Kitty Biomarkers/LEfSe/All/genusV
+Pipeline pipelines/IBD/config.run.lefse.txt
+Kitty Biomarkers/LEfSe/All/familyNoV
+Pipeline pipelines/IBD/config.run.lefse.txt
+Kitty Biomarkers/LEfSe/All/genusNoV
+Pipeline pipelines/IBD/config.run.lefse.txt
+
+Kitty Biomarkers/LEfSe/Adult/all
+Pipeline pipelines/IBD/config.run.lefse.txt
+Kitty Biomarkers/LEfSe/Adult/phylum
+Pipeline pipelines/IBD/config.run.lefse.txt
+Kitty Biomarkers/LEfSe/Adult/class
+Pipeline pipelines/IBD/config.run.lefse.txt
+Kitty Biomarkers/LEfSe/Adult/order
+Pipeline pipelines/IBD/config.run.lefse.txt
+Kitty Biomarkers/LEfSe/Adult/family
+Pipeline pipelines/IBD/config.run.lefse.txt
+Kitty Biomarkers/LEfSe/Adult/familyV
+Pipeline pipelines/IBD/config.run.lefse.txt
+Kitty Biomarkers/LEfSe/Adult/genus
+Pipeline pipelines/IBD/config.run.lefse.txt
+Kitty Biomarkers/LEfSe/Adult/genusV
+Pipeline pipelines/IBD/config.run.lefse.txt
+Kitty Biomarkers/LEfSe/Adult/familyNoV
+Pipeline pipelines/IBD/config.run.lefse.txt
+Kitty Biomarkers/LEfSe/Adult/genusNoV
+Pipeline pipelines/IBD/config.run.lefse.txt
+
+Kitty Biomarkers/LEfSe/Pediatrics/all
+Pipeline pipelines/IBD/config.run.lefse.txt
+Kitty Biomarkers/LEfSe/Pediatrics/phylum
+Pipeline pipelines/IBD/config.run.lefse.txt
+Kitty Biomarkers/LEfSe/Pediatrics/class
+Pipeline pipelines/IBD/config.run.lefse.txt
+Kitty Biomarkers/LEfSe/Pediatrics/order
+Pipeline pipelines/IBD/config.run.lefse.txt
+Kitty Biomarkers/LEfSe/Pediatrics/family
+Pipeline pipelines/IBD/config.run.lefse.txt
+Kitty Biomarkers/LEfSe/Pediatrics/familyV
+Pipeline pipelines/IBD/config.run.lefse.txt
+Kitty Biomarkers/LEfSe/Pediatrics/genus
+Pipeline pipelines/IBD/config.run.lefse.txt
+Kitty Biomarkers/LEfSe/Pediatrics/genusV
+Pipeline pipelines/IBD/config.run.lefse.txt
+Kitty Biomarkers/LEfSe/Pediatrics/familyNoV
+Pipeline pipelines/IBD/config.run.lefse.txt
+Kitty Biomarkers/LEfSe/Pediatrics/genusNoV
+Pipeline pipelines/IBD/config.run.lefse.txt
+

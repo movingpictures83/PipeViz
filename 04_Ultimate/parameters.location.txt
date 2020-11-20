@@ -1,0 +1,2 @@
+csvfile	/biorg/data/IHMP/IBD/hmp2_metadata_curated.csv
+indexfile	../../indices.location.txt

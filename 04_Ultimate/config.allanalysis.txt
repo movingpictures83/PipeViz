@@ -1,0 +1,71 @@
+Plugin RemoveZero inputfile IBD.tmp.csv outputfile IBD.csv
+Plugin TaxonomySplit inputfile IBD.csv outputfile IBD.csv
+
+Plugin CSVScreenTax inputfile ../../../../../screen.familyNoV.nodiag.txt outputfile IBD.all.norm.familyNoV.tmp.csv
+Plugin RemoveZero inputfile IBD.all.norm.familyNoV.tmp.csv outputfile familyNoV/IBD.csv
+Plugin CSVScreenTax inputfile ../../../../../screen.familyV.nodiag.txt outputfile IBD.all.norm.familyV.tmp.csv
+Plugin RemoveZero inputfile IBD.all.norm.familyV.tmp.csv outputfile familyV/IBD.csv
+Plugin CSVScreenTax inputfile ../../../../../screen.genusNoV.nodiag.txt outputfile IBD.all.norm.genusNoV.tmp.csv
+Plugin RemoveZero inputfile IBD.all.norm.genusNoV.tmp.csv outputfile genusNoV/IBD.csv
+Plugin CSVScreenTax inputfile ../../../../../screen.genusV.nodiag.txt outputfile IBD.all.norm.genusV.tmp.csv
+Plugin RemoveZero inputfile IBD.all.norm.genusV.tmp.csv outputfile genusV/IBD.csv
+
+Kitty .
+Plugin CSVNormalize inputfile IBD.csv outputfile IBD.norm.csv
+Plugin CSVTranspose inputfile IBD.norm.csv outputfile IBD.norm.transpose.csv
+Kitty familyNoV
+Plugin CSVNormalize inputfile IBD.csv outputfile IBD.norm.csv
+Plugin CSVTranspose inputfile IBD.norm.csv outputfile IBD.norm.transpose.csv
+Kitty familyV
+Plugin CSVNormalize inputfile IBD.csv outputfile IBD.norm.csv
+Plugin CSVTranspose inputfile IBD.norm.csv outputfile IBD.norm.transpose.csv
+Kitty genusNoV
+Plugin CSVNormalize inputfile IBD.csv outputfile IBD.norm.csv
+Plugin CSVTranspose inputfile IBD.norm.csv outputfile IBD.norm.transpose.csv
+Kitty genusV
+Plugin CSVNormalize inputfile IBD.csv outputfile IBD.norm.csv
+Plugin CSVTranspose inputfile IBD.norm.csv outputfile IBD.norm.transpose.csv
+
+Kitty .
+Plugin CSVScreen inputfile ../../../../../screen.familyNoV.nodiag.normal.txt outputfile IBD.all.norm.familyNoV.tmp.csv
+Plugin RemoveZero inputfile IBD.all.norm.familyNoV.tmp.csv outputfile familyNoV/IBD.csv
+Plugin CSVNormalize inputfile familyNoV/IBD.csv outputfile familyNoV/IBD.norm.csv
+Plugin CSVScreen inputfile ../../../../../screen.familyV.nodiag.normal.txt outputfile IBD.all.norm.familyV.tmp.csv
+Plugin RemoveZero inputfile IBD.all.norm.familyV.tmp.csv outputfile familyV/IBD.csv
+Plugin CSVNormalize inputfile familyV/IBD.csv outputfile familyV/IBD.norm.csv
+Plugin CSVScreen inputfile ../../../../../screen.genusNoV.nodiag.normal.txt outputfile IBD.all.norm.genusNoV.tmp.csv
+Plugin RemoveZero inputfile IBD.all.norm.genusNoV.tmp.csv outputfile genusNoV/IBD.csv
+Plugin CSVNormalize inputfile genusNoV/IBD.csv outputfile genusNoV/IBD.norm.csv
+Plugin CSVScreen inputfile ../../../../../screen.genusV.nodiag.normal.txt outputfile IBD.all.norm.genusV.tmp.csv
+Plugin RemoveZero inputfile IBD.all.norm.genusV.tmp.csv outputfile genusV/IBD.csv
+Plugin CSVNormalize inputfile genusV/IBD.csv outputfile genusV/IBD.norm.csv
+
+Kitty .
+Plugin Bar inputfile ../../../../../bargraph.phylum.txt outputfile phylum/normabund
+Plugin Bar inputfile ../../../../../bargraph.class.txt outputfile class/normabund
+Plugin Bar inputfile ../../../../../bargraph.order.txt outputfile order/normabund
+Plugin Bar inputfile ../../../../../bargraph.family.txt outputfile family/normabund
+Plugin Bar inputfile ../../../../../bargraph.familyNoV.txt outputfile familyNoV/normabund
+Plugin Bar inputfile ../../../../../bargraph.familyV.txt outputfile familyV/normabund
+Plugin Bar inputfile ../../../../../bargraph.genus.txt outputfile genus/normabund
+Plugin Bar inputfile ../../../../../bargraph.genusNoV.txt outputfile genusNoV/normabund
+Plugin Bar inputfile ../../../../../bargraph.genusV.txt outputfile genusV/normabund
+
+Kitty phylum
+Pipeline pipelines/IBD/config.analysis.txt
+Kitty class
+Pipeline pipelines/IBD/config.analysis.txt
+Kitty order
+Pipeline pipelines/IBD/config.analysis.txt
+Kitty family
+Pipeline pipelines/IBD/config.analysis.txt
+Kitty familyNoV
+Pipeline pipelines/IBD/config.analysis.txt
+Kitty familyV
+Pipeline pipelines/IBD/config.analysis.txt
+Kitty genus
+Pipeline pipelines/IBD/config.analysis.txt
+Kitty genusNoV
+Pipeline pipelines/IBD/config.analysis.txt
+Kitty genusV
+Pipeline pipelines/IBD/config.analysis.txt

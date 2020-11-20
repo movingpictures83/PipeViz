@@ -1,0 +1,78 @@
+Prefix 04_Ultimate/
+
+Kitty Biopsy/All
+#################################################################################
+# PROCESS IHMP DATASET
+Plugin CSVIndex inputfile ../../parameters.location.txt outputfile location.csv
+Plugin CSVIndex inputfile ../../parameters.txt outputfile diagnosis.csv
+Plugin CSVIndex inputfile ../../parameters.txt outputfile Biomarkers/LEfSe/All/diagnosis.csv
+Plugin TSV2CSV inputfile /biorg/data/IHMP/IBD/IBD.curated.tsv outputfile IBD.csv
+Plugin CSVTrim inputfile ../../IBD.trim.txt outputfile IBD.trimmed.csv
+Plugin CSVLast2First inputfile IBD.trimmed.csv outputfile IBD.trimmed.f2l.csv
+Plugin CSVTranspose inputfile IBD.trimmed.f2l.csv outputfile IBD.all.tmp.csv
+Plugin CSVPool inputfile IBD.all.tmp.csv outputfile IBD.all.csv
+Plugin CSVNormalize inputfile IBD.all.csv outputfile IBD.all.norm.csv
+################################################################################
+
+Kitty Biopsy
+Plugin CSVIndex inputfile ../parameters.biopsylocation.txt outputfile biopsylocation.csv
+# LOCATION
+Plugin CSVMerge inputfile ../files.location.biopsylocation.txt outputfile merge.biopsylocation.csv
+Plugin CSVExtract inputfile ../extract.ileum.txt outputfile IBD.tmp.tmp.csv
+Plugin CSVRemove inputfile ../remove.txt outputfile Ileum/location.csv
+Plugin CSVExtract inputfile ../extract.rectum.txt outputfile IBD.tmp.tmp.csv
+Plugin CSVRemove inputfile ../remove.txt outputfile Rectum/location.csv
+# DIAGNOSIS
+Plugin CSVMerge inputfile ../files.diagnosis.biopsylocation.txt outputfile merge.biopsylocation.csv
+Plugin CSVExtract inputfile ../extract.ileum.txt outputfile IBD.tmp.tmp.csv
+Plugin CSVRemove inputfile ../remove.txt outputfile Ileum/diagnosis.csv
+Plugin CSVRemove inputfile ../remove.txt outputfile Ileum/Biomarkers/LEfSe/All/diagnosis.csv
+Plugin CSVExtract inputfile ../extract.rectum.txt outputfile IBD.tmp.tmp.csv
+Plugin CSVRemove inputfile ../remove.txt outputfile Rectum/diagnosis.csv
+Plugin CSVRemove inputfile ../remove.txt outputfile Rectum/Biomarkers/LEfSe/All/diagnosis.csv
+# OTUs
+Plugin CSVMerge inputfile ../files.IBD.biopsylocation.txt outputfile merge.biopsylocation.csv
+Plugin CSVExtract inputfile ../extract.ileum.txt outputfile IBD.tmp.tmp.csv
+Plugin CSVRemove inputfile ../remove.txt outputfile Ileum/IBD.all.csv
+Plugin CSVExtract inputfile ../extract.rectum.txt outputfile IBD.tmp.tmp.csv
+Plugin CSVRemove inputfile ../remove.txt outputfile Rectum/IBD.all.csv
+Plugin CSVNormalize inputfile Ileum/IBD.all.csv outputfile Ileum/IBD.all.norm.csv
+Plugin CSVNormalize inputfile Rectum/IBD.all.csv outputfile Rectum/IBD.all.norm.csv
+
+#####################################################################################################
+Kitty Biopsy/All
+Plugin CSVMerge inputfile ../../files.txt outputfile IBD.all.withdiagnosis.csv
+Plugin CSVMerge inputfile ../../files.location.txt outputfile IBD.all.withdiagnosis.withlocation.csv
+Plugin CSVMerge inputfile ../../files.diagnosis.norm.txt outputfile IBD.all.norm.diagnosis.csv
+Plugin CSVMerge inputfile ../../files.location.norm.txt outputfile Biomarkers/LEfSe/All/IBD.tmp.tmp.csv
+Plugin CSVMerge inputfile ../../files.location.diagnosis.txt outputfile diagnosis.withlocation.csv
+Pipeline 04_Ultimate/config.split.agegroups.diagnosis.txt
+Pipeline 04_Ultimate/config.networks.txt
+Pipeline 04_Ultimate/config.lefse.txt
+#################################################################################
+
+#####################################################################################################
+Kitty Biopsy/Ileum
+Plugin CSVMerge inputfile ../../files.txt outputfile IBD.all.withdiagnosis.csv
+Plugin CSVMerge inputfile ../../files.location.txt outputfile IBD.all.withdiagnosis.withlocation.csv
+Plugin CSVMerge inputfile ../../files.diagnosis.norm.txt outputfile IBD.all.norm.diagnosis.csv
+Plugin CSVMerge inputfile ../../files.location.norm.txt outputfile Biomarkers/LEfSe/All/IBD.tmp.tmp.csv
+Plugin CSVMerge inputfile ../../files.location.diagnosis.txt outputfile diagnosis.withlocation.csv
+Pipeline 04_Ultimate/config.split.agegroups.diagnosis.txt
+Pipeline 04_Ultimate/config.networks.txt
+Pipeline 04_Ultimate/config.lefse.txt
+#################################################################################
+
+#####################################################################################################
+Kitty Biopsy/Rectum
+Plugin CSVMerge inputfile ../../files.txt outputfile IBD.all.withdiagnosis.csv
+Plugin CSVMerge inputfile ../../files.location.txt outputfile IBD.all.withdiagnosis.withlocation.csv
+Plugin CSVMerge inputfile ../../files.diagnosis.norm.txt outputfile IBD.all.norm.diagnosis.csv
+Plugin CSVMerge inputfile ../../files.location.norm.txt outputfile Biomarkers/LEfSe/All/IBD.tmp.tmp.csv
+Plugin CSVMerge inputfile ../../files.location.diagnosis.txt outputfile diagnosis.withlocation.csv
+Pipeline 04_Ultimate/config.split.agegroups.diagnosis.txt
+Pipeline 04_Ultimate/config.networks.txt
+Pipeline 04_Ultimate/config.lefse.txt
+#################################################################################
+
+

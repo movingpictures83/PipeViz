@@ -1,3 +1,4 @@
+#!/bin/bash
 # Generates dot file and png from config file
 # usage: viz_pipe config_file [png]
 

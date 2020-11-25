@@ -15,11 +15,11 @@ Plugin CSVExtract inputfile ../../extract.UC.diagnosis.txt outputfile Networks/U
 Plugin CSVExtract inputfile ../../extract.nonIBD.diagnosis.txt outputfile Networks/nonIBD/All/diagnosis.withlocation.csv
 
 Kitty Networks/CD
-Pipeline pipelines/IBD/config.split.agegroups.txt
+Pipeline 04_Ultimate/config.split.agegroups.txt
 Kitty Networks/UC
-Pipeline pipelines/IBD/config.split.agegroups.txt
+Pipeline 04_Ultimate/config.split.agegroups.txt
 Kitty Networks/nonIBD
-Pipeline pipelines/IBD/config.split.agegroups.txt
+Pipeline 04_Ultimate/config.split.agegroups.txt
 
 ################################################################################
 
@@ -27,22 +27,22 @@ Pipeline pipelines/IBD/config.split.agegroups.txt
 # RUN ANALYSIS ON EVERY GROUP
 #
 Kitty Networks/CD/All
-Pipeline pipelines/IBD/config.run.agegroups.txt
+Pipeline 04_Ultimate/config.run.agegroups.txt
 Kitty Networks/CD/Adult
-Pipeline pipelines/IBD/config.run.agegroups.txt
+Pipeline 04_Ultimate/config.run.agegroups.txt
 Kitty Networks/CD/Pediatrics
-Pipeline pipelines/IBD/config.run.agegroups.txt
+Pipeline 04_Ultimate/config.run.agegroups.txt
 Kitty Networks/UC/All
-Pipeline pipelines/IBD/config.run.agegroups.txt
+Pipeline 04_Ultimate/config.run.agegroups.txt
 Kitty Networks/UC/Adult
-Pipeline pipelines/IBD/config.run.agegroups.txt
+Pipeline 04_Ultimate/config.run.agegroups.txt
 Kitty Networks/UC/Pediatrics
-Pipeline pipelines/IBD/config.run.agegroups.txt
+Pipeline 04_Ultimate/config.run.agegroups.txt
 Kitty Networks/nonIBD/All
-Pipeline pipelines/IBD/config.run.agegroups.txt
+Pipeline 04_Ultimate/config.run.agegroups.txt
 Kitty Networks/nonIBD/Adult
-Pipeline pipelines/IBD/config.run.agegroups.txt
+Pipeline 04_Ultimate/config.run.agegroups.txt
 Kitty Networks/nonIBD/Pediatrics
-Pipeline pipelines/IBD/config.run.agegroups.txt
+Pipeline 04_Ultimate/config.run.agegroups.txt
 ###############################################################################
 

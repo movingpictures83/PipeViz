@@ -52,20 +52,20 @@ Plugin Bar inputfile ../../../../../bargraph.genusNoV.txt outputfile genusNoV/no
 Plugin Bar inputfile ../../../../../bargraph.genusV.txt outputfile genusV/normabund
 
 Kitty phylum
-Pipeline pipelines/IBD/config.analysis.txt
+Pipeline 04_Ultimate/config.analysis.txt
 Kitty class
-Pipeline pipelines/IBD/config.analysis.txt
+Pipeline 04_Ultimate/config.analysis.txt
 Kitty order
-Pipeline pipelines/IBD/config.analysis.txt
+Pipeline 04_Ultimate/config.analysis.txt
 Kitty family
-Pipeline pipelines/IBD/config.analysis.txt
+Pipeline 04_Ultimate/config.analysis.txt
 Kitty familyNoV
-Pipeline pipelines/IBD/config.analysis.txt
+Pipeline 04_Ultimate/config.analysis.txt
 Kitty familyV
-Pipeline pipelines/IBD/config.analysis.txt
+Pipeline 04_Ultimate/config.analysis.txt
 Kitty genus
-Pipeline pipelines/IBD/config.analysis.txt
+Pipeline 04_Ultimate/config.analysis.txt
 Kitty genusNoV
-Pipeline pipelines/IBD/config.analysis.txt
+Pipeline 04_Ultimate/config.analysis.txt
 Kitty genusV
-Pipeline pipelines/IBD/config.analysis.txt
+Pipeline 04_Ultimate/config.analysis.txt

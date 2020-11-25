@@ -1,25 +1,25 @@
 Plugin CSVRemove inputfile ../../../../../remove.txt outputfile IBD.tmp.tmp.csv
 Plugin CSVRemove inputfile ../../../../../remove.txt outputfile IBD.tmp.csv
-Pipeline pipelines/IBD/config.allanalysis.txt
+Pipeline 04_Ultimate/config.allanalysis.txt
 Kitty phylum
-Pipeline pipelines/IBD/config.ct.agegroups.txt
+Pipeline 04_Ultimate/config.ct.agegroups.txt
 Kitty class
-Pipeline pipelines/IBD/config.ct.agegroups.txt
+Pipeline 04_Ultimate/config.ct.agegroups.txt
 Kitty order
-Pipeline pipelines/IBD/config.ct.agegroups.txt
+Pipeline 04_Ultimate/config.ct.agegroups.txt
 Kitty family
-Pipeline pipelines/IBD/config.ct.agegroups.txt
+Pipeline 04_Ultimate/config.ct.agegroups.txt
 Plugin Community inputfile ../../../../../../parameters.veillonellaceae.txt outputfile community.veillonellaceae.noa
 Kitty familyV
-Pipeline pipelines/IBD/config.ct.agegroups.txt
+Pipeline 04_Ultimate/config.ct.agegroups.txt
 Plugin Community inputfile ../../../../../../parameters.veillonellaceae.txt outputfile community.veillonellaceae.noa
 Kitty familyNoV
-Pipeline pipelines/IBD/config.ct.agegroups.txt
+Pipeline 04_Ultimate/config.ct.agegroups.txt
 Kitty genus
-Pipeline pipelines/IBD/config.ct.agegroups.txt
+Pipeline 04_Ultimate/config.ct.agegroups.txt
 Plugin Community inputfile ../../../../../../parameters.veillonella.txt outputfile community.veillonella.noa
 Kitty genusV
-Pipeline pipelines/IBD/config.ct.agegroups.txt
+Pipeline 04_Ultimate/config.ct.agegroups.txt
 Plugin Community inputfile ../../../../../../parameters.veillonella.txt outputfile community.veillonella.noa
 Kitty genusNoV
-Pipeline pipelines/IBD/config.ct.agegroups.txt
+Pipeline 04_Ultimate/config.ct.agegroups.txt

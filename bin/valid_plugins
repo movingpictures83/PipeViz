@@ -1,3 +1,4 @@
+#!/bin/bash
 # This script will only return valid plugins. 
 # usage: valid_plugins config_file
 

@@ -1,3 +1,4 @@
+#!/bin/bash
 # usage: plugin_info config_file
 
 if [ $# -lt 1 ] || [ $# -gt 2 ]

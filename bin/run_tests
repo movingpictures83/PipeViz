@@ -1,3 +1,4 @@
+#!/bin/bash
 # usage: run_test
 
 total=0

@@ -1,3 +1,4 @@
+#!/bin/bash
 # usage: replace_parameter_files input_file
 
 param_files=`parameter_files $1`

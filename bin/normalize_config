@@ -1,3 +1,4 @@
+#!/bin/bash
 # This script will recursively build a config file.
 # This is to handle external pipelines.
 # usage: normalize_config config_file

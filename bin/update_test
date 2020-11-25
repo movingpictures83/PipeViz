@@ -1,3 +1,4 @@
+#!/bin/bash
 # Use this script to update the expected.dot file of a test
 # usage: update_test
 

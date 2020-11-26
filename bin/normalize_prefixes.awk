@@ -15,22 +15,30 @@ function buildKittyPath(stack, stackSize) {
     return path;
 }
 
+function fixPrefix(currPrefix) {
+    lastChar = substr(currPrefix, length(currPrefix), 1);
+    if (lastChar != "/") {
+        currPrefix = currPrefix"/";
+    }
+    return currPrefix;
+}
+
+function printFormattedField(field, input, last) {
+    if (substr(input, 1, 1) == "/") {
+        printf("%s %s%s", field, input, last);
+    } else {
+        printf("%s %s%s%s%s", field, prefix, kittyPath, input, last);
+    }
+}
+
 {
     if ($1 == "Prefix") {
-        prefix = $2;
-        lastChar = substr($2, length($2), 1);
-        if (lastChar != "/") {
-            prefix = prefix"/";
-        }
+        prefix = fixPrefix($2);
     }
     if ($1 == "Kitty") {
-        lastChar = substr($2, length($2), 1);
-        if (lastChar != "/") {
-            $2 = $2"/";
-        }
-        kittyStack[stackIndex] = $2;
+        lastKitty = fixPrefix($2);
+        kittyStack[stackIndex] = lastKitty;
         ++stackIndex;
-        lastKitty = $2;
     }
     if ($1 == "#") {
         if ($2 == "StartOfPipeline") {
@@ -43,14 +51,6 @@ function buildKittyPath(stack, stackSize) {
     if ($1 != "Plugin") next;
     kittyPath = (pipelinesCount > 0) ? buildKittyPath(kittyStack, stackIndex) : (lastKitty);
     printf("Plugin %s ", $2);
-    if (substr($4, 1, 1) == "/") {
-        printf("inputfile %s ", $4);
-    } else {
-        printf("inputfile %s%s%s ", prefix, kittyPath, $4);
-    }
-    if (substr($6, 1, 1) == "/") {
-        printf("outputfile %s\n", $6);
-    } else {
-        printf("outputfile %s%s%s\n", prefix, kittyPath, $6);
-    }
+    printFormattedField("inputfile", $4, " ");
+    printFormattedField("outputfile", $6, "\n");
 }

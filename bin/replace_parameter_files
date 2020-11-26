@@ -13,6 +13,6 @@ do
     continue
   fi
   path_prefix=`echo $input_file | egrep -oh "\/?.+[\/]{1}"`
-  actual_input_file=`(egrep 'inputfile' ../$input_file || echo $input_file) | awk 'BEGIN {FS=" ";} { print $2 }' | sed "s/inputfile//g"`
-  echo $line | awk -v actual="$path_prefix$actual_input_file" '{ if (length($0) == 0) next; $4 = actual; print }'
+  actual_input_file=`(egrep 'inputfile' ../$input_file || echo $input_file) | awk 'BEGIN {FS=" ";} { print $2; }' | sed "s/inputfile//g"`
+  echo $line | awk -v actual="$path_prefix$actual_input_file" '{ if (length($0) == 0) next; $4 = actual; print; }'
 done < $1

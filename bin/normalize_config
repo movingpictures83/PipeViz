@@ -4,16 +4,22 @@
 # usage: normalize_config config_file
 
 config_file=$1
+kitty=$2
+last_kitty=""
 
 while read line
 do
   line_type=`echo $line | cut -d ' ' -f 1`
   if [[ $line_type == "Pipeline" ]]
   then
-    echo "# StartOfPipeline"
     pipeline_file=`echo $line | cut -d ' ' -f 2`
-    normalize_config ../$pipeline_file
-    echo "# EndOfPipeline"
+    normalize_config ../$pipeline_file $kitty$last_kitty
+  elif [[ $line_type == "Kitty" ]]
+  then
+    kitty_path=`echo $line | cut -d ' ' -f 2`
+    [[ "${kitty_path}" != */ ]] && kitty_path="${kitty_path}/"
+    echo "Kitty $kitty$kitty_path"
+    last_kitty=$kitty_path
   else
     echo $line
   fi

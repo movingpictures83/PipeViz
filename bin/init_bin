@@ -3,5 +3,6 @@
 # usage: init_bin
 
 export PATH=$PATH:`pwd`
+export MANPATH=`pwd`/../man/:${MANPATH}
 echo "Successfully added `pwd` to PATH."
 chmod 755 ./*

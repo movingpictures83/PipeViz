@@ -1,12 +1,21 @@
 #!/bin/bash
 # This script will recursively build a config file.
 # This is to handle external pipelines.
-# usage: normalize_config config_file
+# usage: normalize_config config_file [kitty]
 
 config_file=$1
 kitty=$2
 last_kitty=""
 
+# Display an error message if an incorrect number of arguments are used
+if [[ $# < 1 || $# > 2 ]]
+then
+	echo "Invalid number of arguments."
+	echo "usage: normalize_config config_file [kitty]"
+	exit 1
+fi
+
+	
 while read line
 do
   line_type=`echo $line | cut -d ' ' -f 1`

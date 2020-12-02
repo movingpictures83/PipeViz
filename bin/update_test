@@ -2,4 +2,7 @@
 # Use this script to update the expected.dot file of a test
 # usage: update_test
 
+# Display an error message if an incorrect number of arguments are used
+[ $# -ne 0 ] && { echo "Invalid number of arguments. Expected 0 got ${#}."; echo "usage: update_test"; exit 1; }
+
 viz_pipe `head -n1 testtarget.txt` ; mv config*.dot expected.dot

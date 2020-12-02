@@ -3,6 +3,9 @@
 
 param_files=`parameter_files $1`
 
+# Display an error message if an incorrect number of arguments are used
+[ $# -ne 1 ] && { echo "Invalid number of arguments. Expected 1 got ${#}."; echo "usage: replace_parameter_files input_file"; exit 1; }
+
 while read line
 do
   line_type=`echo $line | cut -d ' ' -f 1`

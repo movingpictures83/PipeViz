@@ -16,7 +16,8 @@ rm normalized_config.txt
 if [[ $2 == png ]] || [[ $2 == pdf ]]
 then
   dot -T$2 $dot_file -o $1.$2
-else
+elif [[ $# == 2 ]]
+then
     printf "Unknown format $2.\n" 
     exit 1
 fi

@@ -1,13 +1,17 @@
 ./" Man page for viz_pipe
 .TH man 1 "26 November 2020" "1.0" "viz_pipe man page"
 .SH NAME
-viz_pipe -/ Generates a network visualization from a configuration file.
+viz_pipe -- Generates a network visualization from a configuration file.
 .SH SYNOPSIS
-viz_pipe
+viz_pipe config_file [png|pdf]
 .SH DESCRIPTION
- Generates dot file and png from config file
+ Generates a dot file from a config file.
+ Has the option to generate either a pdf or png.
 .SH OPTIONS
-valid_plugin viz_pipe config_file [png]
+.IP png
+Generates the dot file as a png.
+.IP pdf
+Generates the dot file as a pdf.
 .SH SEE ALSO
 run_tests
 .SH BUGS

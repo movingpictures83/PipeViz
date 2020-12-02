@@ -1,4 +1,5 @@
 .DS_Store
 *.dot.png
+*.dot.pdf
 config*.dot
 normalized_config.txt

@@ -5,5 +5,5 @@
 export PATH=$PATH:`pwd`
 export MANPATH=`pwd`/../man/:${MANPATH}
 echo "Successfully added `pwd` to PATH."
-echo "Successfully added PipeViz man path to MANPATH"
+echo "Successfully added PipeViz man path to MANPATH."
 chmod 755 ./*

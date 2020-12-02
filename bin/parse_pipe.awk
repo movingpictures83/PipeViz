@@ -31,7 +31,7 @@ function getFileName(input) {
             thePrefix = currentPrefix;
         } else {
             start = where + length(currentPrefix);
-            thePrefix = substr(inputpath, start, length(inputfile)); 
+            thePrefix = substr(inputpath, start, length(inputfile));
         }
     }
     printf("\t\"%s\"->\"%s\"", $4, pluginId);

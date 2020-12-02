@@ -13,7 +13,10 @@ dot_file=$1.dot
 ((replace_parameter_files normalized_config.txt) | normalize_paths.awk | parse_pipe.awk) > $dot_file
 rm normalized_config.txt
 
-if [[ $2 == png ]]
+if [[ $2 == png ]] || [[ $2 == pdf ]]
 then
-  dot -Tpng -O $dot_file
+  dot -T$2 -O $dot_file
+else
+    printf "Unknown format $2.\n" 
+    exit 1
 fi

@@ -2,6 +2,15 @@
 # Generates dot file and png from config file
 # usage: viz_pipe config_file [png]
 
+# Display an error message if an incorrect number of arguments are used
+if [[ $# < 1 || $# > 2 ]]
+then
+	echo "Invalid number of arguments."
+	echo "usage: viz_pipe config_file [png]"
+	exit 1
+fi
+
+
 if [[ ! -e $1 ]]
 then
   printf "File $1 not found.\n"

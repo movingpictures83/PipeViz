@@ -12,7 +12,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Setup path
-      run: cd bin && . ./init_bin
+      run: cd bin && . ./init_bin && echo $PATH
     - name: Run tests
       run: |
         echo $PATH

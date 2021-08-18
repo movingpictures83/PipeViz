@@ -14,4 +14,6 @@ jobs:
     - name: Setup path
       run: cd bin && . ./init_bin
     - name: Run tests
-      run: cd .. && run_tests
+      run: |
+        echo $PATH
+        cd .. && run_tests

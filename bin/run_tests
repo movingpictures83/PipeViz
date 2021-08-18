@@ -27,3 +27,8 @@ done
 clean_output
 
 echo "Tests: $passed passed, $failed failed, $total total"
+
+if [[ "$failed" -gt 0 ]]
+then
+  exit 1
+fi

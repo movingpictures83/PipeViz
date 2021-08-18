@@ -13,4 +13,3 @@ jobs:
     - uses: actions/checkout@v2
     - name: Run tests
       run: cd bin && . ./init_bin && cd .. && run_tests
-      

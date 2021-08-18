@@ -28,4 +28,4 @@ clean_output
 
 echo "Tests: $passed passed, $failed failed, $total total"
 
-(( $failed > 0 )) && exit 1
+[ "$failed" -gt 0 ] && exit 1

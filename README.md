@@ -64,3 +64,6 @@ Finally push your changes to your branch with:
 If you make any additional changes to your branch, you only need to add, commit, and push your changes. Do not create another branch.
 
 Then create a pull request and request a review from any of the contributors.
+
+Your pull request and any subsequent commits will trigger a CI job.
+This job must succeed to merge the PR.

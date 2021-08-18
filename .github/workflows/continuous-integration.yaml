@@ -11,9 +11,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
-    - name: Setup path
-      run: cd bin && . ./init_bin && echo $PATH
     - name: Run tests
-      run: |
-        echo $PATH
-        cd .. && run_tests
+      run: cd bin && . ./init_bin && cd .. && run_tests
+      
